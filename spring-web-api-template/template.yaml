@@ -3,13 +3,22 @@ description: Template para Web APIs baseadas em Java com Spring Boot e outras te
 types:
   - app-template
 inputs:
-  - label: Enter a Spring Boot version
+  - label: Select a Spring Boot version
     type: text
     name: spring_boot_version
-    default: '3.0.0-M4'
+    items:
+      - '3.0.0-M4'
+      - '2.7.2'
   - label: Enter a Group ID for the project
     type: text
     name: project_group_id
+  - label: Select the Java version
+    type: text
+    name: project_java_version
+    items:
+      - '17'
+      - '11'
+      - '8'
   - label: Enter an Artifact ID for the project
     type: text
     name: project_artifact_id

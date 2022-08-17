@@ -7,7 +7,7 @@ plugins {
 
 group = '{{inputs.project_group_id}}'
 version = '{{inputs.project_version}}'
-sourceCompatibility = '17'
+sourceCompatibility = '{{project_java_version}}'
 
 configurations {
 	compileOnly {

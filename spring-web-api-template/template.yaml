@@ -27,6 +27,6 @@ inputs:
     name: project_version
     default: '0.0.1-SNAPSHOT'
 
-computedInputs:
-  "base_package": "{{inputs.project_group_id}}.{{inputs.project_artifact_id}}"
-  "package_dir": "{{computed_inputs.base_package | replace('.','/')}}"
+global-computed-inputs:
+  "base_package": "{{project_group_id}}.{{project_artifact_id}}"
+  "package_dir": "{{global_computed_inputs.base_package|replace('.','/')}}"

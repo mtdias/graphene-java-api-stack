@@ -1,0 +1,29 @@
+name: java-tracing-plugin
+description: Plugin para configuração de Tracing
+display-name: java-tracing-plugin
+picture: plugin.png
+category: backend
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies:
+  - "Api"
+types:
+  - app
+hooks:
+  - type: edit
+    trigger: after-render
+    path: build.gradle
+    changes:
+      - search:
+          string: "dependencies {"
+          insert-after:
+            snippet: snippets/tracing-dependencies.txt
+          when:
+            not-exists-snippet: snippets/tracing-dependencies.txt
+
+

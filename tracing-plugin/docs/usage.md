@@ -1,6 +1,6 @@
 # Uso
 
-Por meio das linhas de comando StackSpot é possível aplicar o plugin em uma aplicação do tipo APP com o comando:
+É possível aplicar este plugin em uma aplicação do tipo APP utilizando a linha de comando Stackspot (CLI). Basta digitar:
 ```bash
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```
@@ -9,13 +9,13 @@ stk apply plugin graphene-java-api-stack/tracing-plugin
 
 ### Pre-requisitos
 
-Necessário a configuração de alguns pré-requisitos para utilização do plugin.
+Para usar este plugin, você precisa:
 - [**Instalação StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
 - [**Java**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
 ### Configuração Stack CLI
-Executar comando abaixo para atualização de local com catálogo que contém OpenAPI plugin:
+Execute o comando abaixo para atualizar localmente o catálogo que contém OpenAPI plugin:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```
@@ -55,9 +55,7 @@ Stack: graphene-java-api-stack
 ```
 
 ### Instalacao
-Os passos dessa seção mostram como criar e configurar o plugin na aplicação
-
-Copie e cole a URL abaixo no seu terminal:
+Para criar uma aplicação e já configurar o plugin na aplicação, copie e cole o comando abaixo no seu terminal:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/observability
 ```

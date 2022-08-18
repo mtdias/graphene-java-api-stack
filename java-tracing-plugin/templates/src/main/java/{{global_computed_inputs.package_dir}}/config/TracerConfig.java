@@ -1,4 +1,4 @@
-pacakge {{global_computed_inputs.base_package}}.config;
+package {{global_computed_inputs.base_package}}.config;
 
 import io.jaegertracing.Configuration;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -14,7 +14,7 @@ public class TracerConfig {
             .SamplerConfiguration()
             .withType("const")
             .withParam(1);
-        return Configuration.fromEnv("relay-service")
+        return Configuration.fromEnv("{{global_inputs.project_artifact_id}}")
                 .withSampler(samplerConfig).getTracer();
     }
 

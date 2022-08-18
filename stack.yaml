@@ -6,10 +6,12 @@ category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/y
 compatibility: # Put a list of technologies compatible with the stack
   - java
   - spring
-technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies 
-  - docker 
+technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies
+  - docker
+  - java
+  - gradle
 about: docs/about.md
 use-cases:
-  - title: REST API Web Service
+  - title: REST API Web Service with metrics
     content: docs/use-case.md
     stackfile: stackfiles/default.yaml

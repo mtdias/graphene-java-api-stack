@@ -4,5 +4,5 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-rootProject.name = '{{inputs.project_artifact_id}}'
+rootProject.name = '{{project_artifact_id}}'
 includeBuild('add-dep')

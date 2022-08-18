@@ -12,6 +12,7 @@ inputs:
   - label: Enter a Group ID for the project
     type: text
     name: project_group_id
+    global: true
   - label: Select the Java version
     type: text
     name: project_java_version
@@ -22,6 +23,7 @@ inputs:
   - label: Enter an Artifact ID for the project
     type: text
     name: project_artifact_id
+    global: true
   - label: Enter a version for the project
     type: text
     name: project_version

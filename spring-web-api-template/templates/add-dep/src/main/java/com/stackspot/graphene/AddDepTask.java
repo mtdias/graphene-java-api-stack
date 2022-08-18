@@ -7,6 +7,7 @@ import org.gradle.api.tasks.options.OptionValues;
 
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class AddDepTask extends DefaultTask {
 
@@ -69,7 +70,7 @@ public class AddDepTask extends DefaultTask {
         private final Set<MonoDep> deps = new HashSet<>();
 
         MacroDep(MonoDep[] deps) {
-            this.deps.addAll(Arrays.stream(deps).toList());
+            this.deps.addAll(Arrays.stream(deps).collect(Collectors.toList()));
         }
 
         public Set<MonoDep> getDeps() {

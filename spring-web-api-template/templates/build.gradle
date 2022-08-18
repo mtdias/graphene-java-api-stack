@@ -1,12 +1,12 @@
 plugins {
-	id 'org.springframework.boot' version '{{inputs.spring_boot_version}}'
+	id 'org.springframework.boot' version '{{spring_boot_version}}'
 	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
 	id 'java'
 	id 'com.stackspot.graphene.add_dep'
 }
 
-group = '{{inputs.project_group_id}}'
-version = '{{inputs.project_version}}'
+group = '{{project_group_id}}'
+version = '{{project_version}}'
 sourceCompatibility = '{{project_java_version}}'
 
 configurations {

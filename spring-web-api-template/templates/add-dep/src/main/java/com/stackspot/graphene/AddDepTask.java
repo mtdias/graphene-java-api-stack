@@ -5,11 +5,38 @@ import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.options.Option;
 import org.gradle.api.tasks.options.OptionValues;
 
-import java.util.EnumSet;
 import java.io.IOException;
-import java.util.Collection;
+import java.util.*;
 
 public class AddDepTask extends DefaultTask {
+
+    private final BuildFileEditor buildFileEditor = new BuildFileEditor();
+
+    private final DepAnalyzer depAnalyzer = new DepAnalyzer();
+
+    private MacroDep dep;
+
+    public AddDepTask() {
+    }
+
+    @Option(option = "dep", description = "The dependency to be added")
+    public void setDep(MacroDep dep) {
+        this.dep = dep;
+    }
+
+    @OptionValues("dep")
+    Collection<MacroDep> getSupportedDeps() {
+        return EnumSet.allOf(MacroDep.class);
+    }
+
+    @TaskAction
+    public void addDep() throws IOException {
+        buildFileEditor.addMonoDeps(
+                getProject().getBuildFile().toPath(),
+                depAnalyzer.getMissingMonoDeps(getProject(), dep)
+        );
+    }
+
 
     public enum Config {
         IMPLEMENTATION("implementation"),
@@ -29,30 +56,68 @@ public class AddDepTask extends DefaultTask {
         }
     }
 
-    private Config config;
+    public enum MacroDep {
+        SPRING_ACTUATOR(
+                new MonoDep[] {
+                        new MonoDep(
+                                Config.IMPLEMENTATION,
+                                "org.springframework.boot:spring-boot-starter-actuator"
+                        )
+                }
+        );
 
-    private String dep;
+        private final Set<MonoDep> deps = new HashSet<>();
 
-    public AddDepTask() {
+        MacroDep(MonoDep[] deps) {
+            this.deps.addAll(Arrays.stream(deps).toList());
+        }
+
+        public Set<MonoDep> getDeps() {
+            return new HashSet<>(deps);
+        }
     }
 
-    @Option(option = "dep", description = "The dependency to be added, in the format 'group:name:version:classifier@extension', in which all properties, except name, are optional")
-    public void setDep(String dep) {
-        this.dep = dep;
-    }
+    public static class MonoDep {
+        private final Config config;
 
-    @Option(option = "config", description = "The Gradle configuration name")
-    public void setConfig(Config config) {
-        this.config = config;
-    }
+        // should always have at least 'group:name'
+        private final String notation;
 
-    @OptionValues("config")
-    Collection<Config> getSupportedConfigs() {
-        return EnumSet.allOf(Config.class);
-    }
+        public MonoDep(
+                Config config,
+                String notation
+        ) {
+            this.config = config;
+            this.notation = notation;
+        }
 
-    @TaskAction
-    public void addDep() throws IOException {
-        getProject().getDependencies().add(config.getName(), dep);
+        public Config getConfig() {
+            return config;
+        }
+
+        public String getNotation() {
+            return notation;
+        }
+
+        public String getGroup() {
+            return notation.split(":")[0];
+        }
+
+        public String getName() {
+            return notation.split(":")[1];
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            MonoDep that = (MonoDep) o;
+            return config == that.config && Objects.equals(notation, that.notation);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(config, notation);
+        }
     }
 }

@@ -1,0 +1,27 @@
+name: metrics-plugin
+description: Este plugin adiciona funcionalidades de obtenção de métricas da aplicação por meio do componente Spring Actuator.
+display-name: Metrics
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies
+  - java
+  - spring
+types:
+  - app
+hooks:
+  - type: run
+    trigger: after-render
+    working-dir: "{{project_name}}"
+    linux:
+      - gradlew addDep --dep spring_actuator
+    windows:
+      - gradlew.bat addDep --dep spring_actuator
+    mac:
+      - gradlew addDep --dep spring_actuator

@@ -1,5 +1,6 @@
 type: app
-description: Stackfile for a Web API project based on Spring Boot with metrics
+description: Stackfile para um REST API Web Service baseado em Spring Boot, com métricas e outras funcionalidades.
 # template used to create the project
 template: graphene-java-api-stack/spring-web-api-template
-
+plugins:
+ - plugin: graphene-java-api-stack/metrics-plugin

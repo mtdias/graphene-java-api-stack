@@ -1,6 +1,6 @@
-name: java-tracing-plugin
+name: tracing-plugin
 description: Plugin para configuração de Tracing
-display-name: java-tracing-plugin
+display-name: Tracing Plugin
 picture: plugin.png
 category: backend
 compatibility:

@@ -1,4 +1,4 @@
-package {{computed_inputs.base_package}};
+package {{global_computed_inputs.base_package}};
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -4,7 +4,7 @@ Desenvolva e publique Web APIs baseadas na **Stack Java** para ambiente **Cloud 
 
 Esta **Stack** disponibiliza um conjunto de soluções que facilitam o desenvolvimento, publicação e conexão com softwares e produtos da sua empresa, ajudando a viabilizar entregas com mais velocidade e confiança. Os **Templates**, **Plugins** e **Stackfiles** foram projetados para oferecer um ponto de partida flexível, robusto e seguro para acelerar a solução de problemas específicos da aplicação. 
 
-Seus times de desenvolvimento podem focar no que realmente importa: **funcionalidades e regras de negócio**
+Assim, seus times de desenvolvimento podem focar no que realmente importa: **funcionalidades e regras de negócio**
 
 ### **Estrutura da Stack**  
 A **Stack Web API com Spring Boot** foi desenvolvida seguindo as melhores práticas de arquitetura e design de software: 

@@ -7,7 +7,7 @@ stk apply plugin graphene-java-api-stack/tracing-plugin
 
 > Os passos abaixo mostram como importar a Stack em um ambiente local:
 
-### Pre-requisitos
+### **Pré-requisitos**
 
 Para usar este plugin, você precisa ter instalado na sua máquina os seguintes itens: 
 - [**STK CLI**](https://docs.stackspot.com/v3.7.0/docs/stk-cli/installation/)

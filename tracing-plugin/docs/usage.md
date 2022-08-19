@@ -5,7 +5,7 @@
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```
 
-> Os passos abaixo mostram como importar a stack no ambiente local
+> Os passos abaixo mostram como importar a Stack em um ambiente local:
 
 ### Pre-requisitos
 

@@ -1,6 +1,6 @@
 # Stack Web API com Spring Boot
 
-Desenvolva e publique Web APIs baseadas em nossa **Stack** Java para ambiente Cloud Native com Spring Boot e outras tecnologias Spring.
+Desenvolva e publique Web APIs baseadas na **Stack Java** para ambiente **Cloud Native**, com **Spring Boot** e outras tecnologias Spring.
 
 Esta **Stack** disponibiliza um conjunto de soluções que facilitam o desenvolvimento, publicação e conexão com softwares e produtos da sua empresa ajudando viabilizar entregas com mais velocidade e confiança. Os **Templates**, **Plugins** e **Stackfiles** foram projetados para oferecer um ponto de partida flexível, robusto e seguro para acelerar a solução de problemas específicos da aplicação. 
 

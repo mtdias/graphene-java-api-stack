@@ -10,7 +10,7 @@ stk apply plugin graphene-java-api-stack/tracing-plugin
 ### Pre-requisitos
 
 Para usar este plugin, você precisa ter instalado na sua máquina os seguintes itens: 
-- [**Instalação StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
+- [**STK CLI**](https://docs.stackspot.com/v3.7.0/docs/stk-cli/installation/)
 - [**Java**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 

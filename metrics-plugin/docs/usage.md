@@ -3,4 +3,4 @@ Para utilizar este plugin, é necessário ter uma aplicação baseada na `Stack 
 
 Além disso, você precisará ter:
 - JDK >= 11 instalada
-- O template `spring-web-api-template` deverá haver sido usado para a criação do seu projeto sobre o qual este plugin será aplicado.
+- O projeto deve ser criado a partir do template `spring-web-api-template` para que o plugin seja aplicado corretamente.

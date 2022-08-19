@@ -1,16 +1,18 @@
 # Stack Web API com Spring Boot
 
-Desenvolva e publique Web APIs baseadas em nossa **Stack** Java para ambiente Cloud Native com Spring Boot e outras tecnologias Spring.
+Desenvolva e publique Web APIs baseadas na **Stack Java** para ambiente **Cloud Native**, com **Spring Boot** e outras tecnologias Spring.
 
-Esta **Stack** disponibiliza um conjunto de soluções: seus **Templates**, **Plugins** e **Stackfiles**. Por meio dessas soluções, ela facilita o desenvolvimento, publicação e conexão de softwares da sua empresa e/ou produto, ajudando os times de desenvolvimento a entregar software com mais velocidade e confiança, de modo a acelerar a solução de problemas específicos do negócio. Isso permite aos desenvolvedores focar no que realmente importa: **funcionalidades e regras de negócio**. 
+Esta **Stack** disponibiliza um conjunto de soluções que facilitam o desenvolvimento, publicação e conexão com softwares e produtos da sua empresa, ajudando a viabilizar entregas com mais velocidade e confiança. Os **Templates**, **Plugins** e **Stackfiles** foram projetados para oferecer um ponto de partida flexível, robusto e seguro para acelerar a solução de problemas específicos da aplicação. 
+
+Assim, seus times de desenvolvimento podem focar no que realmente importa: **funcionalidades e regras de negócio**
 
 ### **Estrutura da Stack**  
-A **Stack Web API com Spring Boot** foi desenvolvida seguindo diversas boas práticas de arquitetura e design de software: 
+A **Stack Web API com Spring Boot** foi desenvolvida seguindo as melhores práticas de arquitetura e design de software: 
 - Clean Architecture
-- Atualização constante de **Plugins** e **Templates**, focando em acompanhar a modernização tecnológica do mercado, além de garantir compatibilidade com versões anteriores
-- Código facilmente testável
-- Componentes desacoplados
-- Novas funcionalidades que podem ser adicionadas rapidamente pelo time de desenvolvedores
+- Atualização constante de **Plugins** e **Templates** para acompanhar a modernização tecnológica do mercado, sem descuidar da compatibilidade com versões anteriores;
+- Código facilmente testável;
+- Componentes desacoplados;
+- Novas funcionalidades que podem ser adicionadas rapidamente pelo time de desenvolvedores.
 
 A **Stack** apresenta uma estrutura básica onde o **Template** inicia todo o ciclo do desenvolvimento, definindo a linguagem, o framework e organização base dos arquivos. Isso garante que a sua aplicação possa ser compilada e executada localmente com rapidez e facilidade.  
 

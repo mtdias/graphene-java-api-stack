@@ -20,8 +20,10 @@ hooks:
     trigger: after-render
     working-dir: "{{project_name}}"
     linux:
+      - chmod 755 gradlew
       - gradlew addDep --dep spring_actuator
     windows:
       - gradlew.bat addDep --dep spring_actuator
     mac:
+      - chmod 755 gradlew
       - gradlew addDep --dep spring_actuator

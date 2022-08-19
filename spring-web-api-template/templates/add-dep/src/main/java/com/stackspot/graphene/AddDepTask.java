@@ -65,6 +65,14 @@ public class AddDepTask extends DefaultTask {
                                 "org.springframework.boot:spring-boot-starter-actuator"
                         )
                 }
+        ),
+        OPENTRACING_JAEGER(
+                new MonoDep[] {
+                        new MonoDep(
+                                Config.IMPLEMENTATION,
+                                "io.opentracing.contrib:opentracing-spring-jaeger-web-starter:3.1.2"
+                        )
+                }
         );
 
         private final Set<MonoDep> deps = new HashSet<>();

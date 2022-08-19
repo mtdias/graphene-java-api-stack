@@ -10,7 +10,7 @@ Seus times de desenvolvimento podem focar no que realmente importa: **funcionali
 A **Stack Web API com Spring Boot** foi desenvolvida seguindo as melhores práticas de arquitetura e design de software: 
 - Clean Architecture
 - Atualização constante de **Plugins** e **Templates** para acompanhar a modernização tecnológica do mercado, sem descuidar da compatibilidade com versões anteriores;
-- Código facilmente testável
+- Código facilmente testável;
 - Componentes desacoplados;
 - Novas funcionalidades que podem ser adicionadas rapidamente pelo time de desenvolvedores
 

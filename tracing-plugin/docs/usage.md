@@ -55,7 +55,7 @@ Stack: graphene-java-api-stack
 ```
 
 ### **Instalação**
-Para criar uma aplicação e já configurar o plugin na aplicação, copie e cole o comando abaixo no seu terminal:
+Para criar uma aplicação e já configurar o Plugin, copie e cole no seu terminal o seguinte comando:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/observability
 ```

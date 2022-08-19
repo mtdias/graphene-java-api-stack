@@ -1,6 +1,6 @@
 # Uso
 
-É possível aplicar este plugin em uma aplicação do tipo APP utilizando a linha de comando Stackspot (CLI). Basta digitar:
+É possível aplicar este Plugin em uma aplicação do tipo APP utilizando a linha de comando da Stackspot (STK CLI). Para isso, basta executar o seguinte comando:
 ```bash
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```

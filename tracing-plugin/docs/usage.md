@@ -36,7 +36,7 @@ Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 ```
 
-**Listagem plugins disponíveis localmente:**
+**Listagem de Plugins disponíveis localmente:**
 ```bash
 stk list plugin
 ```

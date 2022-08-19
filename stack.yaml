@@ -12,6 +12,9 @@ technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/
   - gradle
 about: docs/about.md
 use-cases:
-  - title: REST API Web Service with metrics
+  - title: REST API Web Service
     content: docs/use-case.md
     stackfile: stackfiles/default.yaml
+  - title: REST API Web Service with metrics and tracing
+    content: docs/use-case.md
+    stackfile: stackfiles/observability.yaml

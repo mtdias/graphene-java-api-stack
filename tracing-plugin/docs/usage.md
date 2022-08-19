@@ -20,7 +20,7 @@ Execute o comando abaixo para atualizar localmente o catálogo que contém o **O
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```
 
-**Listagem template disponíveis localmente:**
+**Listagem de Templates disponíveis localmente:**
 ```bash
 stk list template
 ```

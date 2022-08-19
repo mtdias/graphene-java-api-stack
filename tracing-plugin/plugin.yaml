@@ -1,6 +1,6 @@
 name: tracing-plugin
 description: Plugin para configuração de Tracing
-display-name: Tracing Plugin
+display-name: Tracing
 picture: plugin.png
 category: backend
 compatibility:

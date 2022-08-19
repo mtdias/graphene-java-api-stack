@@ -1,4 +1,4 @@
-# Uso
+### **Uso**
 
 É possível aplicar este Plugin em uma aplicação do tipo APP utilizando a linha de comando da Stackspot (STK CLI). Para isso, basta executar o seguinte comando:
 ```bash

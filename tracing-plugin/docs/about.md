@@ -1,4 +1,4 @@
-## Visao Geral
+## Visão Geral
 ### Como Tracing Plugin funciona
 
 Quando aplicado, este plugin adiciona uma classe de configuração de Tracing utilizando opentracing-spring-jaeger-web-starter.

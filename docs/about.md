@@ -12,7 +12,7 @@ A **Stack Web API com Spring Boot** foi desenvolvida seguindo as melhores práti
 - Atualização constante de **Plugins** e **Templates** para acompanhar a modernização tecnológica do mercado, sem descuidar da compatibilidade com versões anteriores;
 - Código facilmente testável;
 - Componentes desacoplados;
-- Novas funcionalidades que podem ser adicionadas rapidamente pelo time de desenvolvedores
+- Novas funcionalidades que podem ser adicionadas rapidamente pelo time de desenvolvedores.
 
 A **Stack** apresenta uma estrutura básica onde o **Template** inicia todo o ciclo do desenvolvimento, definindo a linguagem, o framework e organização base dos arquivos. Isso garante que a sua aplicação possa ser compilada e executada localmente com rapidez e facilidade.  
 

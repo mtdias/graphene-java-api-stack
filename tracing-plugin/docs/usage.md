@@ -1,31 +1,31 @@
-# Uso
+### **Uso**
 
-É possível aplicar este plugin em uma aplicação do tipo APP utilizando a linha de comando Stackspot (CLI). Basta digitar:
+É possível aplicar este Plugin em uma aplicação do tipo APP utilizando a linha de comando da Stackspot (STK CLI). Para isso, basta executar o seguinte comando:
 ```bash
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```
 
-> Os passos abaixo mostram como importar a stack no ambiente local
+> Os passos abaixo mostram como importar a Stack em um ambiente local:
 
-### Pre-requisitos
+### **Pré-requisitos**
 
-Para usar este plugin, você precisa:
-- [**Instalação StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
+Para usar este plugin, você precisa ter instalado na sua máquina os seguintes itens: 
+- [**STK CLI**](https://docs.stackspot.com/v3.7.0/docs/stk-cli/installation/)
 - [**Java**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
-### Configuração Stack CLI
-Execute o comando abaixo para atualizar localmente o catálogo que contém OpenAPI plugin:
+### **Configuração do STK CLI**
+Execute o comando abaixo para atualizar localmente o catálogo que contém o **OpenAPI Plugin**:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```
 
-**Listagem template disponíveis localmente:**
+**Listagem de Templates disponíveis localmente:**
 ```bash
 stk list template
 ```
 
-**Exemplo output:**
+**Exemplo de output:**
 ```bash
 Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
@@ -36,12 +36,12 @@ Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 ```
 
-**Listagem plugins disponíveis localmente:**
+**Listagem de Plugins disponíveis localmente:**
 ```bash
 stk list plugin
 ```
 
-**Exemplo output:**
+**Exemplo de output:**
 ```bash
 Stack: graphene-java-api-stack
 +----------------+--------------------------------------------------------------+---------+-----------------+
@@ -54,8 +54,8 @@ Stack: graphene-java-api-stack
 +----------------+--------------------------------------------------------------+---------+-----------------+
 ```
 
-### Instalacao
-Para criar uma aplicação e já configurar o plugin na aplicação, copie e cole o comando abaixo no seu terminal:
+### **Instalação**
+Para criar uma aplicação e já configurar o Plugin, copie e cole no seu terminal o seguinte comando:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/observability
 ```

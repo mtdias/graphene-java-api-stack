@@ -15,7 +15,7 @@ Para usar este plugin, você precisa ter instalado na sua máquina os seguintes 
 - [**Git**](https://git-scm.com/)
 
 ### **Configuração do STK CLI**
-Execute o comando abaixo para atualizar localmente o catálogo que contém OpenAPI plugin:
+Execute o comando abaixo para atualizar localmente o catálogo que contém o **OpenAPI Plugin**:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```

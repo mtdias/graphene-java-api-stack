@@ -16,14 +16,13 @@ technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/
 types:
   - app
 hooks:
-  - type: run
+  - type: edit
     trigger: after-render
-    working-dir: "{{project_name}}"
-    linux:
-      - chmod 755 gradlew
-      - gradlew addDep --dep spring_actuator
-    windows:
-      - gradlew.bat addDep --dep spring_actuator
-    mac:
-      - chmod 755 gradlew
-      - gradlew addDep --dep spring_actuator
+    path: build.gradle
+    changes:
+      - search:
+          string: "dependencies {"
+          insert-after:
+            snippet: snippets/metrics-dependencies.txt
+          when:
+            not-exists-snippet: snippets/metrics-dependencies.txt

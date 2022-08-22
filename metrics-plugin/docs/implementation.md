@@ -1,0 +1,1 @@
+Para conhecer as opções de configuração e uso das capacidades adicionadas por este plugin, confira a documentação do [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#actuator).

@@ -15,15 +15,16 @@ technologies:
 types:
   - app
 hooks:
-  - type: edit
+  - type: run
     trigger: after-render
-    path: build.gradle
-    changes:
-      - search:
-          string: "dependencies {"
-          insert-after:
-            snippet: snippets/tracing-dependencies.txt
-          when:
-            not-exists-snippet: snippets/tracing-dependencies.txt
+    working-dir: "{{project_name}}"
+    linux:
+      - chmod 755 gradlew
+      - ./gradlew addDep --dep OPENTRACING_JAEGER
+    windows:
+      - gradlew.bat addDep --dep OPENTRACING_JAEGER
+    mac:
+      - chmod 755 gradlew
+      - ./gradlew addDep --dep OPENTRACING_JAEGER
 
 

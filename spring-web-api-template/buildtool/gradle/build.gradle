@@ -3,7 +3,6 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
     id 'maven-publish'
-    id 'com.stackspot.graphene.add_dep'
 }
 
 group = '{{project_group_id}}'

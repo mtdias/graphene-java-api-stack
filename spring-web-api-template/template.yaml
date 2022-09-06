@@ -3,7 +3,11 @@ description: Template para Web APIs baseadas em Java com Spring Boot e outras te
 types:
   - app-template
 inputs:
-  - label: Select a Spring Boot version
+  - label: "DON'T REMOVE, IT WON'T APPEAR TO THE USERS, BUT REQUIRED TO BE USED IN COMPUTED INPUTS AND GLOBAL INPUTS"
+    type: text
+    name: project_name
+    global: true
+  - label: Select the Spring Boot version
     type: text
     name: spring_boot_version
     items:
@@ -36,7 +40,7 @@ inputs:
     global: true
 
 global-computed-inputs:
-  "project_artifact_id": "{{project_name}}"
+  "project_artifact_id": "{{global_inputs.project_name}}"
   "base_package": "{{project_group_id}}.{{project_name}}"
   "package_dir": "{{global_computed_inputs.base_package|replace('.','/')}}"
 

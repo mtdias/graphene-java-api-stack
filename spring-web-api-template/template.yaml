@@ -3,32 +3,59 @@ description: Template para Web APIs baseadas em Java com Spring Boot e outras te
 types:
   - app-template
 inputs:
-  - label: Select a Spring Boot version
+  - label: "DON'T REMOVE, IT WON'T APPEAR TO THE USERS, BUT REQUIRED TO BE USED IN COMPUTED INPUTS AND GLOBAL INPUTS"
+    type: text
+    name: project_name
+    global: true
+  - label: Select the Spring Boot version
     type: text
     name: spring_boot_version
     items:
       - '3.0.0-M4'
       - '2.7.2'
-  - label: Enter a Group ID for the project
-    type: text
-    name: project_group_id
-    global: true
-  - label: Select the Java version
-    type: text
-    name: project_java_version
-    items:
-      - '17'
-      - '11'
-      - '8'
-  - label: Enter an Artifact ID for the project
-    type: text
-    name: project_artifact_id
-    global: true
+    default: '2.7.2'
   - label: Enter a version for the project
     type: text
     name: project_version
     default: '0.0.1-SNAPSHOT'
+  - label: Enter a Group ID for the project
+    type: text
+    name: project_group_id
+    default: br.com.graphene
+    global: true
+  - label: Select the Java version
+    type: text
+    name: project_java_version
+    global: true
+    items:
+      - '17'
+      - '11'
+  - label: Select the project build tool
+    type: text
+    items:
+      - Maven
+      - Gradle
+    default: Maven
+    name: build_tool
+    global: true
 
 global-computed-inputs:
-  "base_package": "{{project_group_id}}.{{project_artifact_id}}"
+  "project_artifact_id": "{{global_inputs.project_name}}"
+  "base_package": "{{project_group_id}}.{{project_name}}"
   "package_dir": "{{global_computed_inputs.base_package|replace('.','/')}}"
+
+hooks:
+  - type: render-templates
+    trigger: after-render
+    path: buildtool/gradle
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Gradle
+  - type: render-templates
+    trigger: after-render
+    path: buildtool/maven
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven

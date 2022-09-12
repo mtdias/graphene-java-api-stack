@@ -3,7 +3,8 @@ description: Template para Web APIs baseadas em Java com Spring Boot e outras te
 types:
   - app-template
 inputs:
-  - label: "DON'T REMOVE, IT WON'T APPEAR TO THE USERS, BUT REQUIRED TO BE USED IN COMPUTED INPUTS AND GLOBAL INPUTS"
+  ## DON'T REMOVE THE LABEL PROJECT NAME, IT WON'T APPEAR TO THE USERS, BUT REQUIRED TO BE USED IN COMPUTED INPUTS AND GLOBAL INPUTS
+  - label: Project Name
     type: text
     name: project_name
     global: true
@@ -14,6 +15,11 @@ inputs:
       - '3.0.0-M4'
       - '2.7.2'
     default: '2.7.2'
+  - label: Inform the project artifact ID
+    type: text
+    name: project_artifact_id
+    pattern: '(^[a-zA-Z-_\d]*)'
+    global: true
   - label: Enter a version for the project
     type: text
     name: project_version
@@ -23,13 +29,31 @@ inputs:
     name: project_group_id
     default: br.com.graphene
     global: true
+    pattern: '(^[a-zA-Z_\d.]*)'
+  ## In case of Spring boot version be greater than or equals 3
   - label: Select the Java version
     type: text
     name: project_java_version
     global: true
+    condition:
+      variable: spring_boot_version
+      operator: '>='
+      value: '3'
+    items:
+      - '17'
+  ## In case of Spring boot version be less than 3
+  - label: Select the Java version
+    type: text
+    name: project_java_version
+    global: true
+    condition:
+      variable: spring_boot_version
+      operator: '<'
+      value: '3'
     items:
       - '17'
       - '11'
+      - '8'
   - label: Select the project build tool
     type: text
     items:
@@ -40,7 +64,6 @@ inputs:
     global: true
 
 global-computed-inputs:
-  "project_artifact_id": "{{global_inputs.project_name}}"
   "base_package": "{{project_group_id}}.{{project_name}}"
   "package_dir": "{{global_computed_inputs.base_package|replace('.','/')}}"
 

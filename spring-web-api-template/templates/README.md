@@ -16,11 +16,11 @@ Este template visa acelerar o desenvolvimento e publicação de Web APIs para am
 
 ##### (Opção 1). Realizar o build da imagem via docker-compose
 - Para subir o container:
-    - **docker-compose up**
+    - **docker-compose up --build**
 - Para derrubar o container:
     - **docker-compose down**
 
 ##### (Opção 2). Realizar o build da imagem via Dockerfile
 - Executar os seguintes comandos:
-    - **docker build . -t {{project_name}}:1.0.0**
-    - **docker run --name {{project_name}}-app -p 8080:8080 -d {{project_name}}:1.0.0**
+    - **docker build . -t {{project_artifact_id}}:1.0.0**
+    - **docker run --name {{project_artifact_id}}-app -p 8080:8080 -d {{project_artifact_id}}:1.0.0**

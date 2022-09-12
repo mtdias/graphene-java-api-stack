@@ -7,7 +7,7 @@ plugins {
 
 group = '{{project_group_id}}'
 version = '{{project_version}}'
-sourceCompatibility = '{{project_java_version}}'
+sourceCompatibility = '{% if project_java_version == '8'%}1.8{% else %}{{project_java_version}}{% endif %}'
 
 ext {
     micrometerVersion = "1.9.3"

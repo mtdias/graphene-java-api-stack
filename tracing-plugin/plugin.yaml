@@ -14,6 +14,21 @@ technologies:
   - "Api"
 types:
   - app
+inputs:
+  - label: Enter the base package for the project
+    type: text
+    name: project_group_id
+    pattern: '(^[a-zA-Z_\d.]*)'
+    default: br.com.graphene
+    global: true
+  - label: Select the project build tool
+    type: text
+    items:
+      - Maven
+      - Gradle
+    default: Maven
+    name: build_tool
+    global: true
 hooks:
   - type: edit
     trigger: after-render
@@ -25,5 +40,21 @@ hooks:
             snippet: snippets/tracing-dependencies.txt
           when:
             not-exists-snippet: snippets/tracing-dependencies.txt
-
-
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Gradle
+  - type: edit
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - search:
+          string: "</dependencies>"
+          insert-before:
+            snippet: snippets/tracing-dependencies-pom.txt
+          when:
+            not-exists-snippet: snippets/tracing-dependencies-pom.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven

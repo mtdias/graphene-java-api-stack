@@ -77,7 +77,7 @@ hooks:
           snippet: snippets/tracing-dependencies-maven.xml
 #          Add in future version of CLI
 #          when:
-#            not-exists-snippet: snippets/logging-dependencies-maven.xml
+#            not-exists-snippet: snippets/tracing-dependencies-maven.xml
     condition:
       variable: build_tool
       operator: ==

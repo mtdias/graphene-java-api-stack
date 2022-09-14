@@ -24,7 +24,19 @@ public class TracerConfig {
 }
 ```
 
-O plugin também adicionar a dependência `io.opentracing.contrib:opentracing-spring-jaeger-web-starter:3.1.2` ao gradle
+O plugin também adicionar a dependência conforme *build_tool* selecionada:
+
+**Gradle:**  
+`io.opentracing.contrib:opentracing-spring-jaeger-web-starter:3.1.2`
+
+**Maven:**  
+```xml
+<dependency>
+  <groupId>io.opentracing.contrib</groupId>
+  <artifactId>opentracing-spring-jaeger-starter</artifactId>
+  <version>3.1.2</version>
+</dependency>
+```
 
 #### **Execução em Ambiente local**
 

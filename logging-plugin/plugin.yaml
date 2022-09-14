@@ -26,6 +26,21 @@ hooks:
             snippet: snippets/logging-dependencies-gradle.txt
           when:
             not-exists-snippet: snippets/logging-dependencies-gradle.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Gradle
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: .//dependencies
+        append:
+          snippet: snippets/logging-dependencies-maven.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
 
 
       

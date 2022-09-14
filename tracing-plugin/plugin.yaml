@@ -51,6 +51,10 @@ hooks:
     changes:
       - xpath: "dependencies/dependency[groupId='io.opentracing.contrib']"
         clear: true
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
   - type: edit
     trigger: after-render
     path: pom.xml
@@ -59,6 +63,10 @@ hooks:
           string: "<dependency />"
           replace-by:
             value: " "
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
   - type: edit-xml
     trigger: after-render
     path: pom.xml

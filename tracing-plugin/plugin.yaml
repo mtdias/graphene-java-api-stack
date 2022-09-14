@@ -49,7 +49,7 @@ hooks:
     path: pom.xml
     indent: "    "
     changes:
-      - xpath: "dependencies/dependency[groupId='io.opentracing.contrib']"
+      - xpath: "dependencies/dependency[artifactId='opentracing-spring-jaeger-starter']"
         clear: true
     condition:
       variable: build_tool

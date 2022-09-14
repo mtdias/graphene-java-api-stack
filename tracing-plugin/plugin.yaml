@@ -49,6 +49,21 @@ hooks:
     path: pom.xml
     indent: "    "
     changes:
+      - xpath: "dependencies/dependency[groupId='io.opentracing.contrib']"
+        clear: true
+  - type: edit
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - search:
+          string: "<dependency />"
+          replace-by:
+            value: " "
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    indent: "    "
+    changes:
       - xpath: "dependencies"
         append:
           snippet: snippets/tracing-dependencies-maven.xml

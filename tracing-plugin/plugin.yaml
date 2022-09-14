@@ -37,23 +37,24 @@ hooks:
       - search:
           string: "dependencies {"
           insert-after:
-            snippet: snippets/tracing-dependencies.txt
+            snippet: snippets/tracing-dependencies-gradle.txt
           when:
-            not-exists-snippet: snippets/tracing-dependencies.txt
+            not-exists-snippet: snippets/tracing-dependencies-gradle.txt
     condition:
       variable: build_tool
       operator: ==
       value: Gradle
-  - type: edit
+  - type: edit-xml
     trigger: after-render
     path: pom.xml
+    indent: "    "
     changes:
-      - search:
-          string: "</dependencies>"
-          insert-before:
-            snippet: snippets/tracing-dependencies-pom.txt
-          when:
-            not-exists-snippet: snippets/tracing-dependencies-pom.txt
+      - xpath: "dependencies"
+        append:
+          snippet: snippets/tracing-dependencies-maven.xml
+#          Add in future version of CLI
+#          when:
+#            not-exists-snippet: snippets/logging-dependencies-maven.xml
     condition:
       variable: build_tool
       operator: ==

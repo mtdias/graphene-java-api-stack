@@ -64,3 +64,6 @@ out/
 ### VS Code ###
 .vscode/
 
+## Exception
+!/spring-web-api-template/buildtool/gradle/gradle/wrapper/gradle-wrapper.jar
+!/spring-web-api-template/buildtool/maven/.mvn/wrapper/maven-wrapper.jar

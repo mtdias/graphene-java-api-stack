@@ -48,7 +48,6 @@ hooks:
   - type: edit-xml
     trigger: after-render
     path: pom.xml
-    indent: "    "
     changes:
       - xpath: "dependencies/dependency[artifactId='spring-boot-starter-actuator']"
         clear: true
@@ -71,7 +70,6 @@ hooks:
   - type: edit-xml
     trigger: after-render
     path: pom.xml
-    indent: "    "
     changes:
       - xpath: "dependencies"
         append:

@@ -47,7 +47,6 @@ hooks:
   - type: edit-xml
     trigger: after-render
     path: pom.xml
-    indent: "    "
     changes:
       - xpath: "dependencies/dependency[artifactId='opentracing-spring-jaeger-starter']"
         clear: true
@@ -70,7 +69,6 @@ hooks:
   - type: edit-xml
     trigger: after-render
     path: pom.xml
-    indent: "    "
     changes:
       - xpath: "dependencies"
         append:

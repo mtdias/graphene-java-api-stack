@@ -15,6 +15,21 @@ technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/
   - spring
 types:
   - app
+inputs:
+  - label: Enter the base package for the project
+    type: text
+    name: project_group_id
+    pattern: '(^[a-zA-Z_\d.]*)'
+    default: br.com.graphene
+    global: true
+  - label: Select the project build tool
+    type: text
+    items:
+      - Maven
+      - Gradle
+    default: Maven
+    name: build_tool
+    global: true
 hooks:
   - type: edit
     trigger: after-render
@@ -23,6 +38,46 @@ hooks:
       - search:
           string: "dependencies {"
           insert-after:
-            snippet: snippets/metrics-dependencies.txt
+            snippet: snippets/metrics-dependencies-gradle.txt
           when:
-            not-exists-snippet: snippets/metrics-dependencies.txt
+            not-exists-snippet: snippets/metrics-dependencies-gradle.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Gradle
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: "dependencies/dependency[artifactId='spring-boot-starter-actuator']"
+        clear: true
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
+  - type: edit
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - search:
+          string: "<dependency />"
+          replace-by:
+            value: " "
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: "dependencies"
+        append:
+          snippet: snippets/metrics-dependencies-maven.xml
+#          Add in future version of CLI
+#          when:
+#            not-exists-snippet: snippets/metrics-dependencies-maven.xml
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven

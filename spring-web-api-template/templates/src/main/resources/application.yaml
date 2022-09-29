@@ -1,2 +1,23 @@
+##Default profile
 server:
   port: ${SERVER_PORT:8080}
+
+---
+#Local profile
+spring:
+  profiles: local
+
+---
+#Dev profile
+spring:
+    profiles: dev
+
+---
+#Homologation profile
+spring:
+  profiles: hom
+
+---
+#Production profile
+spring:
+  profiles: prod

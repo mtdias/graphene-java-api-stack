@@ -4,6 +4,7 @@ RUN mkdir app
 
 {%set jar_path = "build/libs" if build_tool == "Gradle" else "target" %}
 ADD {{jar_path}}/{{project_artifact_id}}-*-final.jar ./app/springApp.jar
+ADD docker_entrypoint .
 
 EXPOSE ${SERVER_PORT}
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","./app/springApp.jar"]
+ENTRYPOINT ["/bin/sh", "docker_entrypoint"]

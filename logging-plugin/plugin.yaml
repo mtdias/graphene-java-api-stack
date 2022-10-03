@@ -1,0 +1,46 @@
+name: logging-plugin
+description: Este plugin fornece uma pré-configuração para logs estruturados em formato JSON.
+display-name: Logging
+picture: plugin.png
+category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies
+  - java
+  - spring
+types:
+  - app
+hooks:
+  - type: edit
+    trigger: after-render
+    path: build.gradle
+    changes:
+      - search:
+          string: "dependencies {"
+          insert-after:
+            snippet: snippets/logging-dependencies-gradle.txt
+          when:
+            not-exists-snippet: snippets/logging-dependencies-gradle.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Gradle
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: .//dependencies
+        append:
+          snippet: snippets/logging-dependencies-maven.txt
+    condition:
+      variable: build_tool
+      operator: ==
+      value: Maven
+
+
+      

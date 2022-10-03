@@ -52,7 +52,7 @@ executar diretamente usando o perfil padrãot profile.
           docker run --name {{project_artifact_id}}-app -p 8080:8080 -d {{project_artifact_id}}:1.0.0
       ```
     
-#### (Opção 3). Executar aplicação diretamente
+#### (Opção 3). Execução do jar
 - Depois que o build tiver sido executado através do gradle ou maven, você pode executar o jar da aplicação através dos seguintes comandos: 
     ```
         java -jar build/libs/{{project_artifact_id}}-{{project_version}}-final.jar 

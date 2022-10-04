@@ -1,0 +1,3 @@
+#Homologation profile
+spring:
+  profiles: hom

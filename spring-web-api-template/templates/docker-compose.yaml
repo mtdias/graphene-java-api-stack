@@ -5,6 +5,7 @@ services:
     restart: always
     environment:
       SERVER_PORT: 8080
+      SPRING_PROFILES_ACTIVE:
     ports:
       - "8080:8080"
     build: .

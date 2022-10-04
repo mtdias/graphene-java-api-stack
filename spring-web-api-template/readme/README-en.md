@@ -5,7 +5,7 @@ This template aims to accelerate the development and publishing of Web APIs for 
 
 
 #####  (First of All)
-- Build the application using **gradle ou maven**. E.g:
+- Build the application using **gradle or maven**. E.g:
     - Linux
         ```bash
         #Maven:

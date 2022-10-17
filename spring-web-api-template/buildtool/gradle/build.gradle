@@ -10,16 +10,15 @@ version = '{{project_version}}'
 sourceCompatibility = '{% if project_java_version == '8'%}1.8{% else %}{{project_java_version}}{% endif %}'
 
 ext {
-    micrometerVersion = "1.9.3"
+    micrometerVersion = '1.9.3'
 }
 
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = "${group}"
-            artifactId = "${rootProject.name}"
-            version = "${version}"
-
+            groupId = group
+            artifactId = rootProject.name
+            version = version
             from components.java
         }
     }
@@ -40,7 +39,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly "io.micrometer:micrometer-registry-prometheus:${micrometerVersion}"
+    runtimeOnly 'io.micrometer:micrometer-registry-prometheus:'.concat(micrometerVersion)
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -50,5 +49,11 @@ tasks.named('test') {
 }
 
 bootJar {
-    archiveFileName = "${archiveBaseName.get()}-${project.version}-final.${archiveExtension.get()}"
+    archiveFileName = archiveBaseName.get()
+            .concat('-')
+            .concat(project.version)
+            .concat('-')
+            .concat('final')
+            .concat('.')
+            .concat(archiveExtension.get())
 }

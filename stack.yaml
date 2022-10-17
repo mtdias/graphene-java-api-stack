@@ -1,9 +1,9 @@
-description: Desenvolva e publique Web APIs baseadas em nossa stack Java para ambiente Cloud Native com Spring Boot e outras tecnologias Spring.
+description: Develop and publish Web APIs based on Stack Java for Cloud Native environments, with Spring Boot and other Spring technologies.
 name: graphene-java-api-stack
-display-name: Stack Web API com Spring Boot
+display-name: Stack Web API with Spring Boot
 picture: stack.png
-category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
-compatibility: # Put a list of technologies compatible with the stack
+category: Backend; # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category
+compatibility:
   - java
   - spring
 technologies: # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#technologies

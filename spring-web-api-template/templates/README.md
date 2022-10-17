@@ -3,6 +3,9 @@
 
 Este template visa acelerar o desenvolvimento e publicação de Web APIs para ambientes Cloud Native com Spring Boot e outras tecnologias Spring.
 
+### **Pré-requisitos**
+- [**docker >= 20.10.12**](https://docs.docker.com/engine/install/)
+- [**docker compose >= v2.11.2**](https://docs.docker.com/compose/install/)
 
 #####  (Primeiros passos)
 - Realizar o build da aplicação através do **gradle ou maven**. Ex:
@@ -21,27 +24,27 @@ Este template visa acelerar o desenvolvimento e publicação de Web APIs para am
           gradlew build
       ``` 
 
-##### (Opção 1). Executar a aplicação através do docker-compose
+##### (Opção 1). Executar a aplicação através do docker compose
 - É possível executar a aplicação diretamente usando o perfil padrão, ou configurar um perfil específico através da variável de ambiente **SPRING_PROFILES_ACTIVE**.     
 - #### Ex:
-  - Para executar a aplicação utilizando o perfil padrão, é nececssário configurar o docker-compose como mostrado abaixo:
+  - Para executar a aplicação utilizando o perfil padrão, é nececssário configurar o docker compose como mostrado abaixo:
       ```yaml
           environment:
             SPRING_PROFILES_ACTIVE:
       ```
-  - Para executar através de um perfil específico, é necessário configurar o docker-compose conforme mostrado abaixo:
+  - Para executar através de um perfil específico, é necessário configurar o docker compose conforme mostrado abaixo:
      ```yaml
          environment:
            SPRING_PROFILES_ACTIVE: dev, hom or prod
      ```
-- Up container:
-    ```bash
-        docker-compose up --build
-    ``` 
-- Down container:
-    ```bash
-       docker-compose down
-    ```
+  - Up container:
+     ```bash
+         docker compose up --build
+     ``` 
+  - Down container:
+     ```bash
+        docker compose down
+     ```
 
 ##### (Opção 2). Executar a aplicação através do dockerfile
 - Executar os seguintes comandos:

@@ -56,6 +56,9 @@ Stack: graphene-java-api-stack
 |                |                                                              |         |                 |
 | tracing-plugin | This plugin adds functionalities to trace of the application | ['app'] | no release      |
 |                | using Jaeger                                                 |         |                 |
+|                |                                                              |         |                 |
+| logging-plugin | This plugin gives a pre configured structure logs in JSON    | ['app'] | no release      |
+|                | format.                                                      |         |                 |
 +----------------+--------------------------------------------------------------+---------+-----------------+
 ```
 

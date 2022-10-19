@@ -1,6 +1,6 @@
-#### **Automatic Configurations**
+#### **Configurações automáticas**
 
-The plugin creates a Bean to configure the Tracer.
+O plugin cria um Bean de configuração do Tracer.
 
 ```java
 @org.springframework.context.annotation.Configuration
@@ -24,7 +24,7 @@ public class TracerConfig {
 }
 ```
 
-The plugin also adds the dependency based on the selected *build_tool*:
+O plugin também adicionar a dependência conforme *build_tool* selecionada:
 
 **Gradle:**  
 `io.opentracing.contrib:opentracing-spring-jaeger-web-starter:3.1.2`
@@ -38,12 +38,12 @@ The plugin also adds the dependency based on the selected *build_tool*:
 </dependency>
 ```
 
-#### **Execution in Local Environment**
+#### **Execução em Ambiente local**
 
-To use the plugin, run the command below to enable the container **`jaegertracing`**:
+Para executar o plugin, execute o comando abaixo para disponibilizar o contêiner **`jaegertracing`**:
 
 ```
   docker run -d -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest
 ```
 
-To see the traces, access [this link](http://localhost:16686/).
+Para visualizar os traces, acesse [este link](http://localhost:16686/).

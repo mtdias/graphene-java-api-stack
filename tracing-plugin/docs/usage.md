@@ -1,26 +1,26 @@
-### **Uso**
+### **Use**
 
-É possível aplicar este Plugin em uma aplicação do tipo APP utilizando a linha de comando da Stackspot (STK CLI). Para isso, basta executar o seguinte comando:
+It's possible to apply this in an application of type APP with the StackSpot CLI. Run the command below to add the plugin in your application:
 ```bash
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```
 
-> Os passos abaixo mostram como importar a Stack em um ambiente local:
+> The steps below show how to import a Stack in your local environment:
 
-### **Pré-requisitos**
+### **Pre-requirements**
 
-Para usar este plugin, você precisa ter instalado na sua máquina os seguintes itens: 
+To use this plugin, you need to install the following items: 
 - [**STK CLI**](https://docs.stackspot.com/v3.7.0/docs/stk-cli/installation/)
 - [**Java**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
-### **Configuração do STK CLI**
-Execute o comando abaixo para atualizar localmente o catálogo que contém o **OpenAPI Plugin**:
+### **Configuration of STK CLI**
+Execute the command below to import/update the local catalog which contain the Graphene Java API Stack
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```
 
-**Listagem de Templates disponíveis localmente:**
+**The command below lists all templates locally available:**
 ```bash
 stk list template
 ```
@@ -31,31 +31,35 @@ Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 | name                    | description                                               | types            | version(latest) |
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
-| spring-web-api-template | Template para Web APIs baseadas em Java com Spring Boot e | ['app-template'] | no release      |
-|                         | outras tecnologias Spring.                                |                  |                 |
+| spring-web-api-template | Template for Web APIs based on Java with Spring Boot and  | ['app-template'] | no release      |
+|                         | others Spring technologies.                               |                  |                 |
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 ```
 
-**Listagem de Plugins disponíveis localmente:**
+**The command below lists all plugins locally available:**
 ```bash
 stk list plugin
 ```
 
-**Exemplo de output:**
+**Exemple output:**
 ```bash
 Stack: graphene-java-api-stack
 +----------------+--------------------------------------------------------------+---------+-----------------+
 | name           | description                                                  | types   | version(latest) |
 +----------------+--------------------------------------------------------------+---------+-----------------+
-| metrics-plugin | Este plugin adiciona funcionalidades de obtenção de métricas | ['app'] | no release      |
-|                | da aplicação por meio do componente Spring Actuator.         |         |                 |
+| metrics-plugin | This plugin adds functionalities to obtain metrics of the    | ['app'] | no release      |
+|                | application using Spring Actuator component.                 |         |                 |
 |                |                                                              |         |                 |
-| tracing-plugin | Plugin para configuração de Tracing                          | ['app'] | no release      |
+| tracing-plugin | This plugin adds functionalities to trace of the application | ['app'] | no release      |
+|                | using Jaeger                                                 |         |                 |
+|                |                                                              |         |                 |
+| logging-plugin | This plugin gives a pre configured structure logs in JSON    | ['app'] | no release      |
+|                | format.                                                      |         |                 |
 +----------------+--------------------------------------------------------------+---------+-----------------+
 ```
 
-### **Instalação**
-Para criar uma aplicação e já configurar o Plugin, copie e cole no seu terminal o seguinte comando:
+### Install
+To create an application and configure all plugins related to observability, copy and paste the command below in the terminal:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/observability
 ```

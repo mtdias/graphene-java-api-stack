@@ -1,8 +1,8 @@
-## Visão Geral
-### Como o Tracing Plugin funciona
+## General Vision
+### How the Tracing Plugin works
 
-Quando aplicado, este plugin adiciona uma classe de configuração de Tracing utilizando o **`opentracing-spring-jaeger-web-starter`**.
+When applied, this plugin adds a class of configuration of _tracing_ making use of **`opentracing-spring-jaeger-web-starter`**.
 
-Ao iniciar a aplicação, automaticamente, ela se conecta e dispara _tracing_ para um endpoint local.
+When start the application, automatically, it connects and sends _tracing_ to an local endpoint.
 
-Confira mais informações sobre **jaeger** e como subir localmente pelo [**jaegertracing**](https://www.jaegertracing.io/docs/1.37/deployment/)
+See more information about **jaeger** and how to deploy locally at [**jaegertracing**](https://www.jaegertracing.io/docs/1.37/deployment/)

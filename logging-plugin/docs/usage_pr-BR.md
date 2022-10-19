@@ -1,4 +1,3 @@
-#### **Pré-requirements**
 #### **Pré-requisitos**
 Para utilizar este plugin, é necessário ter uma aplicação baseada na [Stack Web API com Spring](https://github.com/stack-spot/graphene-java-api-stack/tree/main/spring-web-api-template) e criada pela `CLI` do `StackSpot`, que você pode baixar [**aqui**](https://stackspot.com/).
 

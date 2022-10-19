@@ -7,7 +7,7 @@ stk apply plugin graphene-java-api-stack/tracing-plugin
 
 > The steps below show how to import a Stack in your local environment:
 
-### **Pre-requirements**
+### **Requirements**
 
 To use this plugin, you need to install the following items: 
 - [**STK CLI**](https://docs.stackspot.com/v3.7.0/docs/stk-cli/installation/)

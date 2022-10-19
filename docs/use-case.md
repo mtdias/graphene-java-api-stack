@@ -1,5 +1,5 @@
 ## **Use Case**
-This use case is ideall to initizalize Java projects with Spring Boot and gradle or maven with observability support.
+This use case is ideal to initialize Java projects with Spring Boot and gradle or maven with observability support.
 
 ### **General Vision**
 [**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds in the stack the capacity to provide _metrics_ to the project.
@@ -19,7 +19,7 @@ To use this plugin is need to install the itens below:
 It's recommended to use some developer tools like [**LocalStack**](https://github.com/localstack/localstack).
 
 ### Stack CLI Configuration
-Execute the command below to import/update the local catalog witch contain the Graphene Java API Stack
+Execute the command below to import/update the local catalog which contain the Graphene Java API Stack
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```

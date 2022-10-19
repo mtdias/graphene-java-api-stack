@@ -1,8 +1,8 @@
-## Visão Geral
-### Como o Logging Plugin funciona
+## General vision
+### How Logging Plugin works
 
-Quando aplicado, este plugin adiciona um arquivo `logback-spring.xml`, configurado para uso da lib **Logstash Logback Encoder**, ao diretório `{projectRoot}/src/main/resources`.
+When applied, this plugin adds a file `logback-spring.xml` which configures the lib **Logstash Logback Encoder**, in the directory `{projectRoot}/src/main/resources`.
 
-Ao iniciar a aplicação, o output dos logs se dará automaticamente em formato JSON.
+Starting the app, the logs output will automatically be in JSON format.
 
-Confira mais informações sobre como customizar o output dos logs por meio do [**Logstash Logback Encoder**](https://github.com/logfellow/logstash-logback-encoder).
+See more information about how to customize the logs output in the following link: [**Logstash Logback Encoder**](https://github.com/logfellow/logstash-logback-encoder).

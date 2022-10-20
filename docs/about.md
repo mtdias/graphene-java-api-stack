@@ -4,7 +4,7 @@ Develop and publish Web APIs based on **Stack Java** for **Cloud Native** enviro
 
 This **Stack** makes available a set of solutions that facilitate the development, publish and connection with softwares and products of your company, helping to enable faster and more reliabe deliveries. The **Templates**, **Plugins** and **Stackfiles** were projected to offer a flexible start point, robust and secure to accelerate application-specific troubleshooting. 
 
-So your development teams can focus on what really matters: **features and business rules**
+Your development teams can focus on what really matters: **features and business rules**
 
 ### **Stack Structure**
 A **Stack Web API with Spring Boot** was developed following the better practices of software design architecture: 

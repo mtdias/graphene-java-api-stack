@@ -6,4 +6,4 @@ It's possible to apply this plugin in an application of type APP, making use of 
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```
 
-With this the Java application with Spring Boot and gradle/maven will have support to _tracing_
+This Java application with Spring Boot and Gradle/Maven will support _tracing_

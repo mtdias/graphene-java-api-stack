@@ -14,7 +14,7 @@ A **Stack Web API with Spring Boot** was developed following the better practice
 - Decoupled components;
 - New features that can be quickly added by the dev team
 
-The **Stack** presents a basic structure where the **Template** starts the entire development cycle, defining the language, the framework and the base organization of the files. This ensures that your application can be compiled and run locally quickly and easily.  
+The **Stack** presents a basic structure where the **Template** starts the entire development cycle, defining the language, the framework, and the base organization of the files. This makes sure your application can easily compile and run locally quickly.  
 
 When using a **Stack** it's possible to add "superpowers" to your created project from a **Template**. To do it, you can apply **Plugins** of the **Stack**. For example, functionalities to provide information about availability, consumption, monitoring, metrics and tracing.
 

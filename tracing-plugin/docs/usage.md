@@ -15,7 +15,7 @@ To use this plugin, you need to install the following items:
 - [**Git**](https://git-scm.com/)
 
 ### **Configuration of STK CLI**
-Execute the command below to import/update the local catalog which contain the Graphene Java API Stack
+To import/update the local catalog with the Graphene Java API Stack, execute the command below:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```

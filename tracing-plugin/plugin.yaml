@@ -1,5 +1,5 @@
 name: tracing-plugin
-description: This plugin adds functionalities to trace of the application using Jaeger.
+description: This plugin adds functionalities to trace the application using Jaeger.
 display-name: Tracing
 picture: plugin.png
 category: backend

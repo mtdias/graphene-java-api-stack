@@ -9,7 +9,7 @@ So your development teams can focus on what really matters: **features and busin
 ### **Stack Structure**
 A **Stack Web API with Spring Boot** was developed following the better practices of software design architecture: 
 - Clean Architecture
-- Continuous update of **Plugins** and **Templates** to accompany the technological modernization of the market, without neglecting the compatibility with previous versions;
+- Continuous **Plugins** and **Templates** update to follow the technological modernization of the market, without neglecting the compatibility with previous versions;
 - Easily testable code;
 - Decoupled components;
 - New features that can be quickly added by the dev team

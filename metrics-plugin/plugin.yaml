@@ -1,5 +1,5 @@
 name: metrics-plugin
-description: This plugin adds functionalities to obtain metrics of the application using Spring Actuator component.
+description: This plugin adds functionalities to obtain the application's metrics using the Spring Actuator component.
 display-name: Metrics
 picture: plugin.png
 category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category

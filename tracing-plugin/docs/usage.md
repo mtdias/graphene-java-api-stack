@@ -1,4 +1,4 @@
-### **Use**
+### **Usage**
 
 It's possible to apply this plugin in the app-type application. Run the STK CLI command to add the plugin to your application:
 ```bash

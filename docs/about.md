@@ -18,4 +18,4 @@ The **Stack** presents a basic structure where the **Template** starts the entry
 
 When using a **Stack** it's possible to add "superpowers" to your created project from a **Template**. To do it, you can apply **Plugins** of the **Stack**. For example, functionalities to provide information about availability, consumption, monitoring, metrics and tracing.
 
-In practice, a **Plugin** can add dependencies to your project, create/change files and, if necessary, execute some terminal commands, among other possibilities. Furthermore, the **Stack** allows development teams to apply **Plugins** according to their own needs.
+A**Plugin** can add dependencies to your project, create/change files and, if necessary, execute some terminal commands, among other possibilities. Furthermore, the **Stack** allows development teams to apply **Plugins** according to their own needs.

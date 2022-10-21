@@ -1,9 +1,6 @@
-Este plugin adiciona funcionalidades de **obtenção de métricas**, **disponibilização de endpoints de monitoramento** e **publicação de eventos de auditoria** em sua aplicação, por meio do componente Spring Boot Actuator.
+This plugin adds the functionality to obtain metrics, enabling endpoints to monitor and publish auditory events in your application, using Spring Bott Actuator.
+- **Health**: Spring Boot Actuator enables endpoints to monitor and interact with your application. For example, the  `health` endpoint gives basic information about the health check in your application.
 
- - **Health**: Spring Boot Actuator disponibiliza endpoints para monitorar e interagir com a sua aplicação. Além dos endpoints embarcados do Spring Boot, você pode adicionar enpoints customizados. Por exemplo, o endpoint `health` provê informações básicas de health check da sua aplicação. 
- 
-> Para testar, inicie a aplicação e faça uma chamada GET para `/actuator/health`.
- - **Metrics**: O Spring Boot Actuator provê métricas dimensionais por meio da integração com [Micrometer](https://micrometer.io)
- - **Audit**: O Spring Boot Actuator tem um flexível framework de auditoria que publica eventos para um `AuditEventRepository`. Isso pode ser muito útil para reports. Por exemplo, em conjunto com o Spring Security os eventos de autenticação serão publicados automaticamente.
-
-
+> To test, start the application and make a GET request to `/actuator/health`.
+- **Metrics**: O Spring Boot Actuator gives dimensional metrics with [Micrometer](https://micrometer.io)
+- **Audit**: O Spring Boot Actuator has a flexible framework of auditory that publish events to an `AuditEventRepository`. This can be very useful to reports. For example, with the Spring Security, the events of authentication will be published automatically.

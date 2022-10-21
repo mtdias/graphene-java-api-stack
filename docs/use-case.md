@@ -1,63 +1,68 @@
-## **Caso de Uso**
-Este Caso de Uso é ideal para a inicialização de projetos Java com Spring Boot e gradle com suporte a observabilidade.
+## **Use Case**
+This use case is ideal to initialize Java projects with Spring Boot and observability support, being able to provide options to choose Gradle or Maven as a build tool.
 
-### **Visão Geral**
-O Plugin [**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adiciona na Stack a capacidade de provisionar métricas ao projeto.
+### **Overview**
+[**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds to the Stack the capacity to provide _metrics_ to a project.
 
-O Plugin [**tracing-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/tracing-plugin) adiciona na Stack a capacidade de provisionar _tracing_ ao projeto.
+[**tracing-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/tracing-plugin) adds to the Stack the capacity to provide _tracing_ to a project.
 
-### **Pré-requisitos**
-Para usar o Plugin é preciso ter instalado os itens abaixo:
+[**logging-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/logging-plugin) adds to the stack the capacity to provide _logs_ to a project.
 
-- [**Instalação StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
+### **Requirements**
+See below the items you need to have installed on your machine:
+
+- [**StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
 - [**Java >= 8**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
-### **Recomendado**
-É recomendada a utilização de algumas ferramentas para desenvolvimento, como por exemplo, o [**LocalStack**](https://github.com/localstack/localstack).
+- It's a recommendation to use development tools like [**LocalStack**](https://github.com/localstack/localstack).
 
-### Configuração Stack CLI
-Execute o comando abaixo para atualizar localmente o catálogo que contém OpenAPI plugin:
+### Stack CLI Configuration
+To import/update the local catalog with the Graphene Java API Stack, execute the command below:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```
 
-**Listagem template disponíveis localmente:**
+**The command below lists all templates locally available:**
 ```bash
 stk list template
 ```
 
-**Exemplo output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 | name                    | description                                               | types            | version(latest) |
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
-| spring-web-api-template | Template para Web APIs baseadas em Java com Spring Boot e | ['app-template'] | no release      |
-|                         | outras tecnologias Spring.                                |                  |                 |
+| spring-web-api-template | Template for Web APIs based on Java with Spring Boot and  | ['app-template'] | no release      |
+|                         | others Spring technologies.                               |                  |                 |
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+
 ```
 
-**Listagem plugins disponíveis localmente:**
+**The command below lists all plugins locally available:**
 ```bash
 stk list plugin
 ```
 
-**Exemplo output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +----------------+--------------------------------------------------------------+---------+-----------------+
 | name           | description                                                  | types   | version(latest) |
 +----------------+--------------------------------------------------------------+---------+-----------------+
-| metrics-plugin | Este plugin adiciona funcionalidades de obtenção de métricas | ['app'] | no release      |
-|                | da aplicação por meio do componente Spring Actuator.         |         |                 |
+| metrics-plugin | This plugin adds functionalities to obtain metrics of the    | ['app'] | no release      |
+|                | application using Spring Actuator component.                 |         |                 |
 |                |                                                              |         |                 |
-| tracing-plugin | Plugin para configuração de Tracing                          | ['app'] | no release      |
+| tracing-plugin | This plugin adds functionalities to trace of the application | ['app'] | no release      |
+|                | using Jaeger                                                 |         |                 |
+|                |                                                              |         |                 |
+| logging-plugin | This plugin gives a pre configured structure logs in JSON    | ['app'] | no release      |
+|                | format.                                                      |         |                 |
 +----------------+--------------------------------------------------------------+---------+-----------------+
 ```
 
-### Instalacao
-Para criar uma aplicação e já configurar o plugin na aplicação, copie e cole o comando abaixo no seu terminal:
+### Install
+To create an application and configure all plugins related to observability, copy and paste the command below in your terminal:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/observability
 ```

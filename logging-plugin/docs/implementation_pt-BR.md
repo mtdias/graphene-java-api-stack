@@ -1,6 +1,6 @@
-#### **Automatic Configurations**
+#### **Configurações automáticas**
 
-The plugin automatically creates an XML with logback configurations (default implementation) of Spring Boot:
+O plugin cria automaticamente um XML de configuração logback (implementação default) do Spring Boot:
 
 ```xml
 <configuration>
@@ -13,4 +13,4 @@ The plugin automatically creates an XML with logback configurations (default imp
 </configuration>
 ```
 
-The plugin also adds the `net.logstash.logback:logstash-logback-encoder` version `7.2` dependency to the project (Gradle/Maven).
+O plugin também adiciona a dependência `net.logstash.logback:logstash-logback-encoder` na versão `7.2` ao projeto (Gradle/Maven).

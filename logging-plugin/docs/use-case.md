@@ -6,4 +6,4 @@ It's possible to apply this plugin in the app-type application. Run the STK CLI 
 stk apply plugin graphene-java-api-stack/logging-plugin
 ```
 
-With this the Java application with Spring Boot and gradle/maven will have support to _logging_
+This Java application with Spring Boot and Gradle/Maven will support _logging_.

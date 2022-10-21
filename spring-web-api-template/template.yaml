@@ -1,7 +1,7 @@
 ## FAZER TRADUÇÃO PARA INGLES
 
 name: spring-web-api-template
-description: Template for Web APIs based on Java with Spring Boot and others Spring technologies.
+description: Template for Web APIs based on Java with Spring Boot and other Spring technologies.
 types:
   - app-template
 inputs:

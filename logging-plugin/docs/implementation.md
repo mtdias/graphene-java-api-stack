@@ -1,6 +1,6 @@
 #### **Automatic Configurations**
 
-The plugin automatic creates a XML with logback configurations (default implementation) of Spring Boot:
+The plugin automatically creates an XML with logback configurations (default implementation) of Spring Boot:
 
 ```xml
 <configuration>

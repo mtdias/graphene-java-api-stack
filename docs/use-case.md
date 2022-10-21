@@ -15,8 +15,7 @@ See below the items you need to have installed on your machine:
 - [**Java >= 8**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
-### **Recommended**
-It's recommended to use some developer tools like [**LocalStack**](https://github.com/localstack/localstack).
+- It's a recommendation to use development tools like [**LocalStack**](https://github.com/localstack/localstack).
 
 ### Stack CLI Configuration
 Execute the command below to import/update the local catalog which contain the Graphene Java API Stack

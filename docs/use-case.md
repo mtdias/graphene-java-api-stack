@@ -4,9 +4,9 @@ This use case is ideal to initialize Java projects with Spring Boot and gradle o
 ### **Overview**
 [**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds to the Stack the capacity to provide _metrics_ to a project.
 
-[**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds to the Stack the capacity to provide _metrics_ to a project.
+[**tracing-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/tracing-plugin) adds to the Stack the capacity to provide _tracing_ to a project.
 
-[**logging-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/logging-plugin) adds in the stack the capacity to provide _logs_ to the project.
+[**logging-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/logging-plugin) adds to the stack the capacity to provide _logs_ to a project.
 
 ### **Requirements**
 To use this plugin is need to install the itens below:

@@ -5,4 +5,4 @@ This plugin adds a `logback-spring.xml` file to configure the **Logstash Logback
 
 When you start the app, the logs output will automatically be in JSON format.
 
-See more information about how to customize the logs output in the following link: [**Logstash Logback Encoder**](https://github.com/logfellow/logstash-logback-encoder).
+For more information about how to customize the logs output, see the [**Logstash Logback Encoder**](https://github.com/logfellow/logstash-logback-encoder).

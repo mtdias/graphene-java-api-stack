@@ -28,7 +28,7 @@ stk import stack https://github.com/stack-spot/graphene-java-api-stack
 stk list template
 ```
 
-**Exemple output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +-------------------------+-----------------------------------------------------------+------------------+-----------------+

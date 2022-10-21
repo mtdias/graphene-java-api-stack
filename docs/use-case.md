@@ -18,7 +18,7 @@ See below the items you need to have installed on your machine:
 - It's a recommendation to use development tools like [**LocalStack**](https://github.com/localstack/localstack).
 
 ### Stack CLI Configuration
-Execute the command below to import/update the local catalog which contain the Graphene Java API Stack
+To import/update the local catalog with the Graphene Java API Stack, execute the command below:
 ```bash
 stk import stack https://github.com/stack-spot/graphene-java-api-stack
 ```

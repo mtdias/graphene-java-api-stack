@@ -44,7 +44,7 @@ Stack: graphene-java-api-stack
 stk list plugin
 ```
 
-**Exemple output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +----------------+--------------------------------------------------------------+---------+-----------------+

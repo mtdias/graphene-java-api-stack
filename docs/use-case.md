@@ -1,8 +1,8 @@
 ## **Use Case**
 This use case is ideal to initialize Java projects with Spring Boot and gradle or maven with observability support.
 
-### **General Vision**
-[**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds in the stack the capacity to provide _metrics_ to the project.
+### **Overview**
+[**metrics-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/metrics-plugin) adds to the Stack the capacity to provide _metrics_ to a project.
 
 [**tracing-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/tracing-plugin) adds in the stack the capacity to provide _tracing_ to the project.
 

@@ -1,6 +1,6 @@
 ### **Use**
 
-It's possible to apply this in an application of type APP with the StackSpot CLI. Run the command below to add the plugin in your application:
+It's possible to apply this plugin in the app-type application. Run the STK CLI command to add the plugin to your application:
 ```bash
 stk apply plugin graphene-java-api-stack/tracing-plugin
 ```

@@ -46,4 +46,4 @@ To use the plugin, run the command below to enable the container **`jaegertracin
   docker run -d -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest
 ```
 
-To see the traces, access [this link](http://localhost:16686/).
+To see the traces, access [this URL](http://localhost:16686/).

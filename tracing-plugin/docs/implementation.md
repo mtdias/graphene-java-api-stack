@@ -38,7 +38,7 @@ The plugin also adds the dependency based on the selected *build_tool*:
 </dependency>
 ```
 
-#### **Execution in Local Environment**
+#### **Running on Local Environment**
 
 To use the plugin, run the command below to enable the **`jaegertracing`** container:
 

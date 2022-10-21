@@ -9,7 +9,7 @@ This use case is ideal to initialize Java projects with Spring Boot and gradle o
 [**logging-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/logging-plugin) adds to the stack the capacity to provide _logs_ to a project.
 
 ### **Requirements**
-To use this plugin is need to install the itens below:
+See below the items you need to have installed on your machine:
 
 - [**StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
 - [**Java >= 8**](https://openjdk.org/)

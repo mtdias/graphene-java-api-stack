@@ -40,7 +40,7 @@ The plugin also adds the dependency based on the selected *build_tool*:
 
 #### **Execution in Local Environment**
 
-To use the plugin, run the command below to enable the container **`jaegertracing`**:
+To use the plugin, run the command below to enable the **`jaegertracing`** container:
 
 ```
   docker run -d -p6831:6831/udp -p16686:16686 jaegertracing/all-in-one:latest

@@ -1,5 +1,5 @@
 name: logging-plugin
-description: This plugin gives a pre configured structure logs in JSON format.
+description: This plugin gives a pre-configured structure log in JSON format.
 display-name: Logging
 picture: plugin.png
 category: backend # Ref: https://docs.stackspot.com/latest/docs/creators-guide/yaml/#category

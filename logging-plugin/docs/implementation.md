@@ -13,4 +13,4 @@ The plugin automatically creates an XML with logback configurations (default imp
 </configuration>
 ```
 
-The plugin also adds the dependency `net.logstash.logback:logstash-logback-encoder` version `7.2` to the project (Gradle/Maven).
+The plugin also adds the `net.logstash.logback:logstash-logback-encoder` version `7.2` dependency to the project (Gradle/Maven).

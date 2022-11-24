@@ -1,0 +1,154 @@
+name: db-relational-plugin
+description: Plugin to configure a relational database at project
+display-name: db-relational-plugin
+picture: plugin.png
+category: backend
+compatibility:
+  - java
+  - spring
+about: docs/about.md
+usage: docs/usage.md
+use-case: docs/use-case.md
+implementation: docs/implementation.md
+technologies:
+  - "Api"
+types:
+  - app
+inputs:
+  - label: "Which database would you like to use?"
+    type: text
+    items:
+      - "PostgreSQL"
+      - "MariaDB"
+    default: "PostgreSQL"
+    name: database
+
+computed-inputs:
+  build_database: "{{build_tool}}{{database}}"
+
+hooks:
+#docker-compose
+  - type: edit
+    trigger: after-render
+    path: docker-compose.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: PostgreSQL
+    changes:
+      - search:
+           string: "- app-{{project_artifact_id}}"
+           insert-after:
+             snippet: snippets/postgresql/postgresql.yaml
+  - type: edit
+    trigger: after-render
+    path: docker-compose.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: MariaDB
+    changes:
+      - search:
+           string: "- app-{{project_artifact_id}}"
+           insert-after:
+             snippet: snippets/mariadb/mariadb.yaml
+#dependencies
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: "dependencies"
+        append:
+          snippet: snippets/postgresql/maven-dependencies.xml
+    condition:
+      variable: build_database
+      operator: ==
+      value: MavenPostgreSQL
+  - type: edit-xml
+    trigger: after-render
+    path: pom.xml
+    changes:
+      - xpath: "dependencies"
+        append:
+          snippet: snippets/mariadb/maven-dependencies.xml
+    condition:
+      variable: build_database
+      operator: ==
+      value: MavenMariaDB
+  - type: edit
+    trigger: after-render
+    path: build.gradle
+    changes:
+      - search:
+          string: "dependencies {"
+          insert-after:
+            snippet: snippets/postgresql/gradle-dependencies.txt
+          when:
+            not-exists-snippet: snippets/postgresql/gradle-dependencies.txt
+    condition:
+      variable: build_database
+      operator: ==
+      value: GradlePostgreSQL
+  - type: edit
+    trigger: after-render
+    path: build.gradle
+    changes:
+      - search:
+          string: "dependencies {"
+          insert-after:
+            snippet: snippets/mariadb/gradle-dependencies.txt
+          when:
+            not-exists-snippet: snippets/mariadb/gradle-dependencies.txt
+    condition:
+      variable: build_database
+      operator: ==
+      value: GradleMariaDB
+#profile
+  - type: edit
+    trigger: after-render
+    path: src/main/resources/application.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: PostgreSQL
+    changes:
+      - search:
+           string: "spring:"
+           insert-after:
+             snippet: snippets/postgresql/application.yaml
+  - type: edit
+    trigger: after-render
+    path: src/test/resources/application.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: PostgreSQL
+    changes:
+      - search:
+           string: "spring:"
+           insert-after:
+             snippet: snippets/postgresql/application-test.yaml
+  - type: edit
+    trigger: after-render
+    path: src/main/resources/application.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: MariaDB
+    changes:
+      - search:
+           string: "spring:"
+           insert-after:
+             snippet: snippets/mariadb/application.yaml
+  - type: edit
+    trigger: after-render
+    path: src/test/resources/application.yaml
+    condition:
+      variable: database
+      operator: ==
+      value: MariaDB
+    changes:
+      - search:
+           string: "spring:"
+           insert-after:
+             snippet: snippets/mariadb/application-test.yaml

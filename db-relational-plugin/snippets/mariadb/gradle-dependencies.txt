@@ -1,0 +1,4 @@
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.8'
+    testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.3'
+    testImplementation group: 'org.testcontainers', name: 'mariadb', version: '1.17.3'

@@ -39,7 +39,7 @@ Stack: graphene-java-api-stack
 stk list plugin
 ```
 
-**Exemplo output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +-----------------+------------------------------------------+-----------------+
@@ -52,8 +52,8 @@ Stack: graphene-java-api-stack
 
 ```
 
-### Install
-To create an application and configure all plugins related to db-relational, copy and paste the command below in your terminal:
+### Installation
+To create an application and configure all the plugins related to the **db-relational**, execute the command below in your terminal:
 ```bash
 stk create app meu-teste-app --stackfile graphene-java-api-stack/db-relational
 ```

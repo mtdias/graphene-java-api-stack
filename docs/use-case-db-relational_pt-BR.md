@@ -1,13 +1,13 @@
 ## **Caso de Uso**
-Este Caso de Uso é ideal para a inicialização de projetos Java com Spring Boot e maven/gradle com suporte a comunicação com banco de dados relacionais.
+Este caso de uso inicializa projetos Java com Spring Boot e Maven/Gradle com suporte a comunicação com banco de dados relacionais.
 
 ### **Visão Geral**
 O Plugin [**db-relational-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/db-relational-plugin) adiciona na Stack a capacidade de integração com bancos de dados relacionais.
 
 ### **Pré-requisitos**
-Para usar o Plugin é preciso ter instalado os itens abaixo:
+Para usar o Plugin é preciso ter instalado:
 
-- [**Instalação StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
+- [**Instalação STK CLI**](https://stackspot.com/login?route=/download/cli)
 - [**Java >= 8**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
@@ -45,8 +45,8 @@ Stack: graphene-java-api-stack
 +-----------------+------------------------------------------+-----------------+
 | name            | description                              | version(latest) |
 +-----------------+------------------------------------------+-----------------+
-| db-relational-p | Plugin to configure a relational         | no release      |
-| lugin           | database at project                      |                 |
+| db-relational-p | Plugin para configurar a base de dados   | no release      |
+| lugin           | relacional no projeto.                   |                 |
 |                 |                                          |                 |
 | logging-plugin  | Este plugin fornece uma pré-configuração | no release      |
 |                 | para logs estruturados em formato JSON.  |                 |

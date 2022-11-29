@@ -1,13 +1,13 @@
 #### Configurations
 
-The plugin adds the necessary code snippet to upload a local database to the docker-compose.yaml file. To know more about the parameters of each image:
+The plugin adds the necessary code snippet to upload a local database to the docker-compose.yaml file. For more information about the parameters of each image, see below:
 
-[PostgreSQL](https://hub.docker.com/_/postgres)
-[MariaDB](https://hub.docker.com/_/mariadb)
+[**PostgreSQL**](https://hub.docker.com/_/postgres)
+[**MariaDB**](https://hub.docker.com/_/mariadb)
 
-The dependencies and code snippets necessary for the application to connect to relational databases will also be added.
+It also adds the dependencies and code snippets for the application to connect to relational databases.
 
-The plugin adds the necessary dependencies according to the *build_tool* selected when the project was created using the graphene-java-api-stack stack:
+The plugin adds the dependencies according to the *build_tool* selected when the project was created using the graphene-java-api-stack stack:
 
 MariaDB
 
@@ -76,8 +76,8 @@ PostgreSQL
 ```
 
 The settings necessary for the application to connect to the database will be added to the application.yaml file:
+See the PostgreSQL example below:
 
-Example for PostgreSQL:
 **application.yaml:**  
 ```yaml
   datasource:
@@ -90,4 +90,4 @@ Example for PostgreSQL:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 ```
 
-Remember to use environment variables to upload the project to a productive environment!
+Use environment variables to upload the project to a productive environment!

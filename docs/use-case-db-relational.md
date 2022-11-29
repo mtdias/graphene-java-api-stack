@@ -1,13 +1,12 @@
 ## **Use Case**
-This Use Case is ideal for starting Java projects with Spring Boot and maven/gradle with relational database communication support.
+This use case starts Java projects with Spring Boot and Maven/Gradle with relational database communication support.
 
 ### **Overview**
 [**db-relational-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/db-relational-plugin) adds to Stack the ability to integrate with relational databases.
 
 ### **Requirements**
-See below the items you need to have installed on your machine:
-
-- [**StakSpot CLI**](https://docs.stackspot.com/v3.0.0/os-cli/installation/)
+See below what you need: 
+- [**STK CLI**](https://stackspot.com/login?route=/download/cli)
 - [**Java >= 8**](https://openjdk.org/)
 - [**Git**](https://git-scm.com/)
 
@@ -22,7 +21,7 @@ stk import stack https://github.com/stack-spot/graphene-java-api-stack
 stk list template
 ```
 
-**Exemplo output:**
+**Output example:**
 ```bash
 Stack: graphene-java-api-stack
 +--------------+---------------------------------+-----------------+
@@ -34,7 +33,7 @@ Stack: graphene-java-api-stack
 +--------------+---------------------------------+-----------------+
 ```
 
-**The command below lists all plugins locally available:**
+**The command below lists all the available plugins locally:**
 ```bash
 stk list plugin
 ```

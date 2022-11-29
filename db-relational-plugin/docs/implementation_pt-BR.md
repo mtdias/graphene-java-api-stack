@@ -1,12 +1,11 @@
-O plugin adiciona ao arquivo docker-compose.yaml o trecho de código necessário para subir uma base de dados local. Para conhecer mais dos paramêtros cada imagem:
+O plugin adiciona ao arquivo docker-compose.yaml o trecho de código necessário para subir uma base de dados local. Para mais informações dos paramêtros de cada imagem, confira abaixo:
 
-[PostgreSQL](https://hub.docker.com/_/postgres)
-[MariaDB](https://hub.docker.com/_/mariadb)
+[**PostgreSQL**](https://hub.docker.com/_/postgres)
+[**MariaDB**](https://hub.docker.com/_/mariadb)
 
-Será adicionando também as dependencias e trechos de código necessários para a aplicação se conectar à bases de dados relacionais.
+As dependência e trechos de código necessários são adicionados para a aplicação se conectar à bases de dados relacionais.
 
-
-O plugin adiciona as dependências necessárias conforme *build_tool* selecinado no momento que o projeto foi criado utilizando a stack graphene-java-api-stack:
+O plugin adiciona as dependências necessárias conforme **build_tool** selecionado no momento em que o projeto foi criado, utilizando a stack graphene-java-api-stack:
 
 MariaDB
 
@@ -74,9 +73,8 @@ PostgreSQL
 </dependency>
 ```
 
-Será adicionado ao arquivo application.yaml as configurações necessárias para a aplicação se conectar na base de dados:
+As configurações necessárias são adicionadas ao arquivo application.yaml para a aplicação se conectar na base de dados. Confira o exemplo para PostgreSQL:
 
-Exemplo para PostgreSQL:
 **application.yaml:**  
 ```yaml
   datasource:
@@ -89,4 +87,4 @@ Exemplo para PostgreSQL:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 ```
 
-Lembre-se de utilizar variáveis de ambiente para subida do projeto em ambiente produtivo!
+Utilize variáveis de ambiente para subir o seu projeto em ambiente produtivo!

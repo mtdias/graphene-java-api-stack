@@ -1,0 +1,5 @@
+type: app
+description: Stackfile for a Spring Boot-based REST API Web Service with a relational database.
+template: graphene-java-api-stack/spring-web-api-template
+plugins:
+ - plugin: graphene-java-api-stack/db-relational-plugin

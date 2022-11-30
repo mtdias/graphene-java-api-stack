@@ -1,0 +1,5 @@
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:postgresql:////test_db
+    username: user
+    password: password

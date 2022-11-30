@@ -1,0 +1,24 @@
+    depends_on:
+      postgresql-server:
+        condition: service_healthy
+  postgresql-server:
+    image: postgres:14.1-alpine    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s     
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: ${POSTGRES_USER:-test}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+
+    networks:
+      - app-{{project_artifact_id}}      
+volumes:
+  postgresql-volume:

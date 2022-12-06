@@ -1,6 +1,6 @@
 name: db-relational-plugin
 description: Plugin to configure a relational database at project
-display-name: db-relational-plugin
+display-name: Relational DB
 picture: plugin.png
 category: backend
 compatibility:

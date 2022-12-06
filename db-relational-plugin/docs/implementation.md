@@ -13,7 +13,7 @@ The plugin adds the dependencies according to the *build_tool* selected when the
 MariaDB
 
 **Gradle:**
-```  
+```gradle  
 `implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'`
 `implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.8'`
 `testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.3'`
@@ -48,7 +48,7 @@ MariaDB
 PostgreSQL
 
 **Gradle:**
-```
+```gradle
 `implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'`
 `implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.0'`
 `testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.3'`

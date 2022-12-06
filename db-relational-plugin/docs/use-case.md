@@ -1,5 +1,7 @@
 ## **Use Case**
-This use case starts Java projects with Spring Boot and Maven/Gradle with relational database communication support.
+This use case starts Java projects with Spring Boot using Maven or Gradle. It provides support to integrate relational databases, adding the corresponding dependence on the build tool according to the user's choice.
+
+It also configures the appropriate connection driver and adds initial properties to the application.yaml. It configures the docker-compose, quickly enabling the connection between the application and the database.
 
 ### **Overview**
 [**db-relational-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/db-relational-plugin) adds to Stack the ability to integrate with relational databases.

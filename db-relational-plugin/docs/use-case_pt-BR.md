@@ -1,5 +1,7 @@
 ## **Caso de Uso**
-Este caso de uso inicializa projetos Java com Spring Boot e Maven/Gradle com suporte a comunicação com banco de dados relacionais.
+Este caso de uso inicia projetos Java com Spring Boot usando Maven ou Gradle. Ele fornece suporte para integrar bancos de dados relacionais, adicionando a dependência correspondente na ferramenta de construção de acordo com a escolha do usuário.
+
+Ele também configura o driver de conexão apropriado e adiciona propriedades iniciais ao arquivo application.yaml. Também configura o docker-compose, permitindo realizar a conexão entre a aplicação e o banco de dados com o mínimo de esforço.
 
 ### **Visão Geral**
 O Plugin [**db-relational-plugin**](https://github.com/stack-spot/graphene-java-api-stack/tree/main/db-relational-plugin) adiciona na Stack a capacidade de integração com bancos de dados relacionais.

@@ -1,8 +1,8 @@
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://mariadb-server:3306/test
-    username: admin
-    password: admin123
+    url: jdbc:mariadb://mariadb-server:3306/${MYSQL_DATABASE:test}
+    username: ${MYSQL_USER:admin}
+    password: ${MYSQL_PASSWORD:admin}
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.MariaDBDialect

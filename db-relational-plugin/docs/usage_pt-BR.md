@@ -15,5 +15,4 @@ stk apply plugin graphene-java-api-stack/db-relational-plugin
 **Passo 1.** Selecione as configurações para as bases suportadas:
 
 [PostgreSQL](https://www.postgresql.org/)
-
 [MariaDB](https://mariadb.org/)

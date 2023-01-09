@@ -33,6 +33,10 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+
+###stacktest
+stacktest/.git/
+
 ### STS ###
 .apt_generated
 .classpath

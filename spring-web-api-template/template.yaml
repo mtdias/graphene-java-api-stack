@@ -20,18 +20,19 @@ inputs:
   - label: Inform the project artifact ID
     type: text
     name: project_artifact_id
-    pattern: '(^[a-zA-Z-_\d]*)'
+    pattern: '(^[a-zA-Z-_\d]*$)'
     global: true
   - label: Enter a version for the project
     type: text
     name: project_version
     default: '0.0.1-SNAPSHOT'
+    pattern: '(^[a-zA-Z-._\d]*[a-zA-Z\d]$)'
   - label: Enter a Group ID for the project
     type: text
     name: project_group_id
     default: br.com.graphene
     global: true
-    pattern: '(^[a-zA-Z_\d.]*)'
+    pattern: '(^[a-zA-Z_\d.]*[a-zA-Z_\d]$)'
   ## In case of Spring boot version be greater than or equals 3
   - label: Select the Java version
     type: text

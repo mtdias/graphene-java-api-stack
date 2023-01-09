@@ -12,7 +12,7 @@
       MYSQL_RANDOM_ROOT_PASSWORD: true #only development
       MYSQL_DATABASE: ${MYSQL_DATABASE:-test}
       MYSQL_USER: ${MYSQL_USER:-admin}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-admin123}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-admin}
     volumes:
       - mariadb-volume:/var/lib/mysql
     networks:

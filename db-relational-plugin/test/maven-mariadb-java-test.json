@@ -1,0 +1,110 @@
+{
+  "base_plugin":  "spring-web-api-template",
+  "exec_configurations": [
+    {
+      "technologies":[{"name": "java", "version": 17},{"name":  "maven"}],
+      "input_flags_mock": {
+        "project_name": "app_maven_java_17_spring3_0_0_m4_db_relational_plugin_mariadb",
+        "spring_boot_version": "3.0.0-M4",
+        "project_artifact_id": "app_maven_java_17_spring3_0_0_m4_db_relational_plugin_mariadb",
+        "project_version": "0.0.1-SNAPSHOT",
+        "project_group_id": "br.com.graphene",
+        "project_java_version": "17",
+        "build_tool": "Maven"
+      },
+      "after_render": {
+        "apply_plugin": {
+          "plugin_name": "db-relational-plugin",
+          "input_flags_mock": {
+            "database": "MariaDB"
+          }
+        },
+        "build_commands": ["./mvnw clean install -Dmaven.test.skip=true", "docker compose up -d --build --wait"],
+        "test_instructions":[
+          {
+            "command": "curl -s --write-out '%{json}' localhost:8080/ | jq -s .[1]",
+            "contains_result_as_json": {"errormsg":  null, "exitcode":  0},
+            "not_contains_result_as_json": {"content_type":  null},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          },
+          {
+            "command": "docker exec app_maven_java_17_spring3_0_0_m4_db_relational_plugin_mariadb curl -s --write-out '%{json}' mariadb-server:3306/test | jq -s .[0]",
+            "contains_result_as_json": {"errormsg":  "Received HTTP/0.9 when not allowed", "exitcode":  1, "num_connects": 1},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          }
+        ],
+        "after_test_commands": ["docker compose down"]
+      }
+    },
+    {
+      "technologies":[{"name": "java", "version": 11},{"name":  "maven"}],
+      "input_flags_mock": {
+        "project_name": "app_maven_java_11_spring2_7_2_db_relational_plugin_mariadb",
+        "spring_boot_version": "2.7.2",
+        "project_artifact_id": "app_maven_java_11_spring2_7_2_db_relational_plugin_mariadb",
+        "project_version": "0.0.1-SNAPSHOT",
+        "project_group_id": "br.com.graphene",
+        "project_java_version": "11",
+        "build_tool": "Maven"
+      },
+      "after_render": {
+        "apply_plugin": {
+          "plugin_name": "db-relational-plugin",
+          "input_flags_mock": {
+            "database": "MariaDB"
+          }
+        },
+        "build_commands": ["./mvnw clean install -Dmaven.test.skip=true", "docker compose up -d --build --wait"],
+        "test_instructions":[
+          {
+            "command": "curl -s --write-out '%{json}' localhost:8080/ | jq -s .[1]",
+            "contains_result_as_json": {"errormsg":  null, "exitcode":  0},
+            "not_contains_result_as_json": {"content_type":  null},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          },
+          {
+            "command": "docker exec app_maven_java_11_spring2_7_2_db_relational_plugin_mariadb curl -s --write-out '%{json}' mariadb-server:3306/test | jq -s .[0]",
+            "contains_result_as_json": {"errormsg":  "Received HTTP/0.9 when not allowed", "exitcode":  1, "num_connects": 1},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          }
+        ],
+        "after_test_commands": ["docker compose down"]
+      }
+    },
+    {
+      "technologies":[{"name": "java", "version": 8},{"name":  "maven"}],
+      "input_flags_mock": {
+        "project_name": "app_maven_java_8_spring2_7_2_db_relational_plugin_mariadb",
+        "spring_boot_version": "2.7.2",
+        "project_artifact_id": "app_maven_java_8_spring2_7_2_db_relational_plugin_mariadb",
+        "project_version": "0.0.1-SNAPSHOT",
+        "project_group_id": "br.com.graphene",
+        "project_java_version": "8",
+        "build_tool": "Maven"
+      },
+      "after_render": {
+        "apply_plugin": {
+          "plugin_name": "db-relational-plugin",
+          "input_flags_mock": {
+            "database": "MariaDB"
+          }
+        },
+        "build_commands": ["./mvnw clean install -Dmaven.test.skip=true", "docker compose up -d --build --wait"],
+        "test_instructions":[
+          {
+            "command": "curl -s --write-out '%{json}' localhost:8080/ | jq -s .[1]",
+            "contains_result_as_json": {"errormsg":  null, "exitcode":  0},
+            "not_contains_result_as_json": {"content_type":  null},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          },
+          {
+            "command": "docker exec app_maven_java_8_spring2_7_2_db_relational_plugin_mariadb curl -s --write-out '%{json}' mariadb-server:3306/test | jq -s .[0]",
+            "contains_result_as_json": {"errormsg":  "Received HTTP/0.9 when not allowed", "exitcode":  1, "num_connects": 1},
+            "not_contains_texts": ["Failed to connect to localhost port", "Connection refused"]
+          }
+        ],
+        "after_test_commands": ["docker compose down"]
+      }
+    }
+  ]
+}

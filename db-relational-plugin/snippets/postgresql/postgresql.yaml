@@ -12,7 +12,7 @@
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: ${POSTGRES_USER:-test}
+      POSTGRES_DB: ${POSTGRES_DB:-test}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     volumes:

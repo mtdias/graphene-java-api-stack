@@ -2,6 +2,7 @@ version: '3.9'
 services:
   ms-{{project_artifact_id}}:
     image: {{project_artifact_id}}
+    container_name: {{project_artifact_id}}
     restart: always
     environment:
       SERVER_PORT: 8080
@@ -9,6 +10,12 @@ services:
     ports:
       - "8080:8080"
     build: .
+    healthcheck:
+      test: curl http://localhost:8080
+      interval: 5s
+      retries: 5
+      start_period: 5s
+      timeout: 10s
     networks:
       - app-{{project_artifact_id}}
 networks:

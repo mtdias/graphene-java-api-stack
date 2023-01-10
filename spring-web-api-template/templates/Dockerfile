@@ -1,7 +1,7 @@
 #OFFICIAL docker-hub image eclipse-temuriun for Java {{project_java_version}}
 FROM eclipse-temurin:{{project_java_version}}
 
-RUN apt-get update && apt-get install curl
+RUN apt-get update && apt-get -y install curl
 RUN mkdir app
 
 {%set jar_path = "build/libs" if build_tool == "Gradle" else "target" %}

@@ -1,6 +1,6 @@
 name: db-relational-plugin
 description: Plugin to configure a relational database at project
-display-name: db-relational-plugin
+display-name: Relational DB
 picture: plugin.png
 category: backend
 compatibility:
@@ -27,7 +27,7 @@ computed-inputs:
   build_database: "{{build_tool}}{{database}}"
 
 hooks:
-#docker-compose
+  #docker-compose
   - type: edit
     trigger: after-render
     path: docker-compose.yaml
@@ -37,9 +37,9 @@ hooks:
       value: PostgreSQL
     changes:
       - search:
-           string: "- app-{{project_artifact_id}}"
-           insert-after:
-             snippet: snippets/postgresql/postgresql.yaml
+          string: "- app-{{project_artifact_id}}"
+          insert-after:
+            snippet: snippets/postgresql/postgresql.yaml
   - type: edit
     trigger: after-render
     path: docker-compose.yaml
@@ -49,10 +49,10 @@ hooks:
       value: MariaDB
     changes:
       - search:
-           string: "- app-{{project_artifact_id}}"
-           insert-after:
-             snippet: snippets/mariadb/mariadb.yaml
-#dependencies
+          string: "- app-{{project_artifact_id}}"
+          insert-after:
+            snippet: snippets/mariadb/mariadb.yaml
+  #dependencies
   - type: edit-xml
     trigger: after-render
     path: pom.xml
@@ -103,7 +103,7 @@ hooks:
       variable: build_database
       operator: ==
       value: GradleMariaDB
-#profile
+  #profile
   - type: edit
     trigger: after-render
     path: src/main/resources/application.yaml
@@ -113,9 +113,9 @@ hooks:
       value: PostgreSQL
     changes:
       - search:
-           string: "spring:"
-           insert-after:
-             snippet: snippets/postgresql/application.yaml
+          string: "spring:"
+          insert-after:
+            snippet: snippets/postgresql/application.yaml
   - type: edit
     trigger: after-render
     path: src/test/resources/application.yaml
@@ -125,9 +125,9 @@ hooks:
       value: PostgreSQL
     changes:
       - search:
-           string: "spring:"
-           insert-after:
-             snippet: snippets/postgresql/application-test.yaml
+          string: "spring:"
+          insert-after:
+            snippet: snippets/postgresql/application-test.yaml
   - type: edit
     trigger: after-render
     path: src/main/resources/application.yaml
@@ -137,9 +137,9 @@ hooks:
       value: MariaDB
     changes:
       - search:
-           string: "spring:"
-           insert-after:
-             snippet: snippets/mariadb/application.yaml
+          string: "spring:"
+          insert-after:
+            snippet: snippets/mariadb/application.yaml
   - type: edit
     trigger: after-render
     path: src/test/resources/application.yaml
@@ -149,6 +149,6 @@ hooks:
       value: MariaDB
     changes:
       - search:
-           string: "spring:"
-           insert-after:
-             snippet: snippets/mariadb/application-test.yaml
+          string: "spring:"
+          insert-after:
+            snippet: snippets/mariadb/application-test.yaml

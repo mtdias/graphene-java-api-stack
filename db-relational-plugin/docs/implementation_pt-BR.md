@@ -1,6 +1,7 @@
 O plugin adiciona ao arquivo docker-compose.yaml o trecho de código necessário para subir uma base de dados local. Para mais informações dos paramêtros de cada imagem, confira abaixo:
 
 [**PostgreSQL**](https://hub.docker.com/_/postgres)
+
 [**MariaDB**](https://hub.docker.com/_/mariadb)
 
 As dependência e trechos de código necessários são adicionados para a aplicação se conectar à bases de dados relacionais.
@@ -9,13 +10,15 @@ O plugin adiciona as dependências necessárias conforme **build_tool** selecion
 
 MariaDB
 
-**Gradle:**  
+**Gradle:**
+```gradle  
 `implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'`
 `implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.0.8'`
 `testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.3'`
 `testImplementation group: 'org.testcontainers', name: 'mariadb', version: '1.17.3'`
+```
 
-**Maven:**  
+**Maven:**
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -42,13 +45,15 @@ MariaDB
 
 PostgreSQL
 
-**Gradle:**  
+**Gradle:**
+```gradle  
 `implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'`
 `implementation group: 'org.postgresql', name: 'postgresql', version: '42.5.0'`
 `testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.3'`
 `testImplementation group: 'org.testcontainers', name: 'postgresql', version: '1.17.3'`
+```
 
-**Maven:**  
+**Maven:**
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -75,7 +80,7 @@ PostgreSQL
 
 As configurações necessárias são adicionadas ao arquivo application.yaml para a aplicação se conectar na base de dados. Confira o exemplo para PostgreSQL:
 
-**application.yaml:**  
+**application.yaml:**
 ```yaml
   datasource:
     driver-class-name: org.postgresql.Driver

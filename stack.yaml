@@ -19,5 +19,5 @@ use-cases:
     content: docs/use-case.md
     stackfile: stackfiles/observability.yaml
   - title: REST API Web Service with database relational
-    content: docs/use-case-db-relational.md
-    stackfile: stackfiles/db-relational.yaml    
+    content: db-relational-plugin/docs/use-case.md
+    stackfile: stackfiles/db-relational.yaml

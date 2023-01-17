@@ -35,6 +35,5 @@ class AfterRender:
     def get_after_test_commands(self):
         if "after_test_commands" in self.__after_render_as_json:
             return self.__after_render_as_json["after_test_commands"]
-        raise StackTestException(
-            message=JSON_UNDEFINED_NODE_ERROR_MESSAGE.format(
-                node_path="exec_configurations.after_render.after_test_commands"))
+        return []
+

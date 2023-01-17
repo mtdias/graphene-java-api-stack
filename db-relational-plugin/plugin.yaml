@@ -27,6 +27,9 @@ computed-inputs:
   build_database: "{{build_tool}}{{database}}"
 
 hooks:
+  - type: run-script
+    trigger: before-input
+    script: ../common_scripts/hooks/asking_for_required_information.py
   #docker-compose
   - type: edit
     trigger: after-render

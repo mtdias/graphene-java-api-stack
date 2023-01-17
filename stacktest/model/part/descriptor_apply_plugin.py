@@ -17,7 +17,4 @@ class ApplyPlugin:
     def get_input_flags(self):
         if "input_flags_mock" in self.__apply_plugin_as_json:
             return InputFlags(self.__apply_plugin_as_json["input_flags_mock"])
-        raise StackTestException(
-            message=JSON_UNDEFINED_NODE_ERROR_MESSAGE.format(
-                node_path=f"exec_configurations.after_render.apply_plugin.input_flags_mock"))
-
+        return InputFlags({})

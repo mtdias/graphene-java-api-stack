@@ -67,7 +67,7 @@ inputs:
     global: true
 
 global-computed-inputs:
-  "base_package": "{{project_group_id}}.{{project_name}}"
+  "base_package": "{{project_group_id}}.{{project_name|replace('-','')|replace('.','')}}"
   "package_dir": "{{global_computed_inputs.base_package|replace('.','/')}}"
 
 hooks:

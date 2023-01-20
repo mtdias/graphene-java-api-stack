@@ -2,4 +2,4 @@ spring:
   application:
     name: {{project_name}}
 server:
-  port: ${SERVER_PORT:8080}
+  port: 8080

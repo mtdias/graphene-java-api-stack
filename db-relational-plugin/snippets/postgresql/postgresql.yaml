@@ -10,7 +10,7 @@
       retries: 5
       start_period: 10s     
     ports:
-      - "5432:5432"
+      - ${INGRESS_SERVER_PORT_POSTGRES_DB:-5432}:5432
     environment:
       POSTGRES_DB: ${POSTGRES_DB:-test}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}

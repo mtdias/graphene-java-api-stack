@@ -7,7 +7,7 @@
       test: "/usr/bin/mysql --user=$$MYSQL_USER --password=$$MYSQL_PASSWORD --execute \"SHOW DATABASES;\""
     restart: always
     ports:
-      - "3306:3306"
+      - ${INGRESS_SERVER_PORT_MARIA_DB:-3306}:3306
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: true #only development
       MYSQL_DATABASE: ${MYSQL_DATABASE:-test}

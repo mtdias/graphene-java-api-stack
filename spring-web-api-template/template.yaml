@@ -14,9 +14,10 @@ inputs:
     type: text
     name: spring_boot_version
     items:
-      - '3.0.0-M4'
+      - '3.0.1'
       - '2.7.2'
-    default: '2.7.2'
+    default: '3.0.1'
+    global: true
   - label: Inform the project artifact ID
     type: text
     name: project_artifact_id

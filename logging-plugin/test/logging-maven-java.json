@@ -5,7 +5,7 @@
       "technologies":[{"name": "java", "version": 17},{"name":  "maven"}],
       "input_flags_mock": {
         "project_name": "app_maven_java_17_spring3_0_0_logging_plugin",
-        "spring_boot_version": "3.0.0-M4",
+        "spring_boot_version": "3.0.1",
         "project_artifact_id": "app_maven_java_17_spring3_0_0_logging_plugin",
         "project_version": "0.0.1-SNAPSHOT",
         "project_group_id": "br.com.graphene",
